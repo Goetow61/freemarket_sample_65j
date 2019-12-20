@@ -128,6 +128,7 @@
   width: 1020px;
   margin: 0 auto;
   background-color: blanchedalmond;
+  box-sizing: border-box;
  
   .contents-main__new__category{
     height: 583px;
@@ -136,7 +137,7 @@
     
     
     .contents-main__new__category__header{
-      height: 33px;
+      height: 73px;
       width: 1020px;
       margin: 0, 0, 16px;
       background-color: aliceblue;
@@ -174,10 +175,12 @@
       page-break-inside: avoid;
       break-inside: avoid;
       position: relative;
+      box-sizing: border-box;
     
-    // .contents-main__new__category__items__card__img{
-     
-    
+    .contents-main__new__category__items__card__img{
+      height: 182px;
+      width: 188px;
+      box-sizing: border-box;
     .contents-main__new__category__items__card__money{
       font-size: 17px;
       font-family: fantasy;
@@ -187,13 +190,17 @@
       background-color: darkgray;
       text-align: center;
       border-radius: 0px 20px 20px 0px;
+      position: absolute;
+      top: 140px;
+      
+    }
       
     }
     .contents-main__new__category__items__card__text{
-      height: 100px;
+      height: 70px;
       width: 188px;
       position: absolute;
-      top: 152px;
+      top: 182px;
       background-color: #FFFFFF;
       text-align: center;
     }
@@ -202,10 +209,3 @@
  }
 }
 
-.exhibit-btn{
-  height: 160px;
-  width: 160px;
-  border-radius: 50%;
-  
-  background-color: crimson;
-}
