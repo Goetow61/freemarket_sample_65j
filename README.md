@@ -28,9 +28,9 @@
 |user_id|integer|null: false, foreign_key: true|
 |postcode|string|null: false|
 |prefecture_code|integer|null: false|
-|address_city|string|null: false|
-|address_street|string|null: false|
-|address_building|string|
+|city|string|null: false|
+|street|string|null: false|
+|building|string|
 ### Association
 - belongs_to :user
 
