@@ -1,16 +1,4 @@
-.header
-  .heading
-    %h3.heading-logo
-      mercali
-    .heading__form
-      -# = f.text_field :content, class: 'form__message',placeholder: '何かお探しですか？'
-  .header-item__btn
-    .header-item__btn-left
-      .header-item__btn-left-first
-      .header-item__btn-left-second
-    .header-item__btn-right
-      .header-item__btn-right-first
-      .header-item__btn-right-second
+= render 'shared/header'
 .slider-frame
   .slider-list
     .slider-list__first
@@ -39,27 +27,5 @@
 -#   = render @luiviton
 -#   = render @supreme
 -#   = render @nike
-.footer
-  .footer-top
-    .footer-top__comment
-    .footer-top-big__comment
-    .footer-top__image
-    .footer-top__btn
-      .footer-top__btn__left
-      .footer-top__btn__center
-      .footer-top__btn__right
-  .footer-bottom
-    .footer-bottom__info
-      .footer-bottom__info__mercali
-        .footer-bottom__info__mercali__btn
-          =link_to "https://twitter.com/", class: "contents__btn" do
-            Twitter
-          =link_to "https://www.facebook.com/", class: "contents__btn" do
-            Facebook
-      .footer-bottom__info__help
-      .footer-bottom__info__privacy
-      .footer-bottom__info__policy
-      .footer-bottom__info__safety
-      .footer-bottom__info__country  
-      .footer-bottom__info__copyright
+= render 'shared/footer'
 .exhibit-btn
