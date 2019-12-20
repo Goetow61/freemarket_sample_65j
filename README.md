@@ -8,7 +8,7 @@
 |first_name_kana|string|null: false|
 |introduction|text|
 |nickname|string|null: false|
-|email|string|null: false|
+|email|string|null: false, unique: true|
 |password|string|null: false|
 |birthday|date|null: false|
 |tellnumber|integer|null: false|
@@ -32,7 +32,7 @@
 |address_street|string|null: false|
 |address_building|string|
 ### Association
-- belongs_to :user
+- has_one :user
 
 
 
@@ -43,7 +43,7 @@
 |uid|integer|null: false|
 |provider|string|null: false|
 ### Association
-- belongs_to :user
+- has_one :user
 
 
 
@@ -51,10 +51,10 @@
 |Column|Type|Options|
 |------|----|-------|
 |user_id|integer|null: false, foreign_key: true|
-|customer_id|integer|null: false|
-|card_id|integer|null: false|
+|customer_id|string|null: false|
+|card_id|string|null: false|
 ### Association
-- belongs_to :user
+- has_one :user
 
 
 ## evalutionテーブル
@@ -73,15 +73,16 @@
 |------|----|-------|
 |user_id|integer|null: false, foreign_key: true|
 |buyer_id|integer|null: false, foreign_key: true|
-|name|string|null: false|
-|detail|text|
+|name|string|null: false, index: true|
+|detail|text|null: false|
 |status|string|null: false|
-|postage|string|null: false|
-|streetadress|string|null: false, foreign_key: true|
+|postage|boolean|null: false|
+|postmethod|integer|null: false|
+|streetadress|integer|null: false, foreign_key: true|
 |days|integer|null: false|
 |price|integer|null: false|
-|size|integer|null: false|
-|brand|string|null: false|
+|size|string|
+|brand|string|
 |category_tree_id|integer|null: false, foreign_key: true|
 ### Association
 - belongs_to :user
@@ -123,7 +124,7 @@
 ## categoryテーブル
 |Column|Type|Options|
 |------|----|-------|
-|name|string|null: false, foreign_key: true| 
+|name|string|null: false, foreign_key: true, index: true| 
 ### Association
 - has_many :category_tree
 
