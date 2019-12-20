@@ -39,8 +39,8 @@
 ## snsacountテーブル(device)
 |Column|Type|Options|
 |------|----|-------|
-|user_id|string|null: false, foreign_key: true|
-|uid|integer|null: false|
+|user_id|integer|null: false, foreign_key: true|
+|uid|string|null: false|
 |provider|string|null: false|
 ### Association
 - belongs_to :user
