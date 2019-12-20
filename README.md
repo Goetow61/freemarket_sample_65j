@@ -17,7 +17,7 @@
 - has_one :snsacount dependent: :destroy
 - has_many :evalutions
 - has_many :items dependent: :destroy
-- has_many :likes
+- has_many :likes dependent: :destroy
 
 
 
@@ -75,7 +75,7 @@
 |category_tree_id|integer|null: false, foreign_key: true|
 ### Association
 - belongs_to :user
-- has_many :likes
+- has_many :likes dependent: :destroy
 - has_many :images dependent: :destroy
 - belongs_to :category_tree
 
