@@ -23,6 +23,8 @@
 
 
 ## addressテーブル
+|Column|Type|Options|
+|------|----|-------|
 |user_id|integer|null: false, foreign_key: true|
 |postcode|integer|null: false|
 |prefecture_code|integer|null: false|
@@ -35,6 +37,8 @@
 
 
 ## snsacountテーブル(device)
+|Column|Type|Options|
+|------|----|-------|
 |user_id|integer|null: false, foreign_key: true|
 |uid|integer|null: false|
 |provider|string|null: false|
@@ -44,6 +48,8 @@
 
 
 ## cardsテーブル
+|Column|Type|Options|
+|------|----|-------|
 |user_id|integer|null: false, foreign_key: true|
 |customer_id|integer|null: false|
 |card_id|integer|null: false|
@@ -52,6 +58,8 @@
 
 
 ## evalutionテーブル
+|Column|Type|Options|
+|------|----|-------|
 |user_id|integer|null: false, foreign_key: true|
 |threesteps|integer|null: false|
 |evaluationcomment|text|
@@ -61,6 +69,8 @@
 
 
 ## itemテーブル
+|Column|Type|Options|
+|------|----|-------|
 |user_id|integer|null: false, foreign_key: true|
 |buyer_id|integer|null: false, foreign_key: true|
 |name|string|null: false|
@@ -83,6 +93,8 @@
 
 
 ## likeテーブル
+|Column|Type|Options|
+|------|----|-------|
 |user_id|integer|null: false, foreign_key: true|
 |item_id|integer|null: false, foreign_key: true|
 ### Association
@@ -91,6 +103,8 @@
 
 
 ## imageテーブル
+|Column|Type|Options|
+|------|----|-------|
 |item_id|integer|null: false, foreign_key: true|
 |image|string|null: false, foreign_key: true|
 ### Association
@@ -98,6 +112,8 @@
 
 
 ## category_treeテーブル
+|Column|Type|Options|
+|------|----|-------|
 |ancestor_id|integer|null: false| 
 |descendent_id|integer|null: false| 
 |depth|integer|
@@ -105,6 +121,8 @@
 - belongs_to :category
 
 ## categoryテーブル
+|Column|Type|Options|
+|------|----|-------|
 |name|string|null: false, foreign_key: true| 
 ### Association
 - has_many :category_tree
