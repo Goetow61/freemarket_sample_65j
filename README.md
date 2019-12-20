@@ -47,22 +47,15 @@
 
 
 
-## cardsテーブル
-|Column|Type|Options|
-|------|----|-------|
-|user_id|integer|null: false, foreign_key: true|
-|customer_id|string|null: false|
-|card_id|string|null: false|
-### Association
-- belongs_to :user
+
 
 
 ## evalutionテーブル
 |Column|Type|Options|
 |------|----|-------|
 |user_id|integer|null: false, foreign_key: true|
-|threesteps|integer|null: false|
-|evaluationcomment|text|
+|three_steps|integer|null: false|
+|evaluation_comment|text|
 ### Association
 - belongs_to :user
 
@@ -110,7 +103,7 @@
 - belongs_to :item
 
 
-## category_treeテーブル
+## category_treesテーブル
 |Column|Type|Options|
 |------|----|-------|
 |ancestor_id|integer|null: false| 
