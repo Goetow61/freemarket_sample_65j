@@ -61,33 +61,133 @@
 }
 .category{
   height: 171px;
-  width: 1440px;
+  width: 100%;
   background-color: greenyellow;
   .category-populer{
     height: 50px;
-    width: 1440px;
+    width: 100%;
     text-align: center;
-    font-size: 35px;
-    padding-top: 30px;
+    font-size: 28px;
+    padding-top: 40px;
     padding-bottom:10px;
+    font-family: fantasy;
   }
   .category-genre{
     height: 40px;
-    width: 1440px; 
+    width: 100%; 
     background-color: magenta;
     padding-top: 10px;
-    display: flex;
-    justify-content: space-between;
-    .category-genre-list {
-      height: 30px;
-      width: 100px;
-      padding: 8px, 16px;
-      background-color: bisque;
+    
+    .category-genre__list {
+      font-family: fantasy;
+      display: flex;
+      justify-content: center;
+      text-align: center;
+      font-size: 15px;
+      margin-top: 3px;
+      
+      .category-genre__list-first{
+        height: 30px;
+        width: 100px;
+        background-color: beige;
+        margin-right: 10px;
+        border-radius: 27px;
+        text-decoration: none;        
+        
       }
+      .category-genre__list-second{
+        height: 30px;
+        width: 74px;
+        background-color: beige;
+        margin-right: 10px;
+        border-radius: 27px;
+        text-decoration: none;
+      }
+      .category-genre__list-third{
+        height: 30px;
+        width: 172px;
+        background-color: beige;
+        margin-right: 10px;
+        border-radius: 27px;
+        text-decoration: none;
+      }
+      .category-genre__list-forth{
+        height: 30px;
+        width: 200px;
+        background-color: beige;
+        margin-right: 10px;
+        border-radius: 27px;
+        text-decoration: none;
+      }
+    }
     
   }
 }
-.contents-main__category{
-  height: 390px;
-  width: 1440px;
+.contents-main__new{
+  height: 2614px;
+  width: 1020px;
+  margin: 0 auto;
+  background-color: blanchedalmond;
+ 
+  .contents-main__new__category{
+    height: 583px;
+    width: 1020px;
+    
+    
+    
+    .contents-main__new__category__header{
+      height: 33px;
+      width: 1020px;
+      margin: 0, 0, 16px;
+      background-color: aliceblue;
+      display: flex;
+      justify-content: space-between;
+
+      .contents-main__new__category__header__left{
+        height: 33px;
+        width: 929px;
+        font-size: 24px;
+        font-family: fantasy;
+      }
+      .contents-main__new__category__header__right{
+        height: 24px;
+        width: 91px;
+        font-size: 14px;
+        font-family: fantasy;
+        padding: 5px;
+        color: #0095EE;
+      }
+    }
+    .contents-main__new__category__items{
+      height: 550px;
+      width: 1020px;
+      column-count: 5;
+      column-gap: 0;
+    }
+    .contents-main__new__category__items__card{
+      height: 252px;
+      width: 188px;
+      background-color: cornsilk;
+      margin: auto;
+      margin-bottom: 10px;
+      -webkit-column-break-inside: avoid;
+      page-break-inside: avoid;
+      break-inside: avoid;
+    }
+    .contents-main__new__category__items__card__img{
+      position: relative;
+    }
+    .contents-main__new__category__items__card__money{
+      font-size: 17px;
+      font-family: fantasy;
+      padding: 0, 12px;
+      color:#FFFFFF;
+      height: 28px;
+      width: 78px;
+      background-color: darkgray;
+      text-align: center;
+      border-radius: 0px 20px 20px 0px;
+      
+    }
+  }
 }
