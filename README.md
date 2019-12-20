@@ -13,11 +13,10 @@
 |birthday|date|null: false|
 |tellnumber|string|null: false, unique: true|
 ### Association
-- has_many :addresses
-- has_one :snsacount
-- has_one :card
+- has_many :addresses dependent: :destroy
+- has_one :snsacount dependent: :destroy
 - has_many :evalutions
-- has_many :items
+- has_many :items dependent: :destroy
 - has_many :likes
 
 
@@ -44,9 +43,6 @@
 |provider|string|null: false|
 ### Association
 - belongs_to :user
-
-
-
 
 
 
@@ -80,7 +76,7 @@
 ### Association
 - belongs_to :user
 - has_many :likes
-- has_many :images
+- has_many :images dependent: :destroy
 - belongs_to :category_tree
 
 
