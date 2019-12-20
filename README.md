@@ -75,7 +75,7 @@
 |buyer_id|integer|null: false, foreign_key: true|
 |name|string|null: false, index: true|
 |detail|text|null: false|
-|status|string|null: false|
+|status|integer|null: false|
 |postage|boolean|null: false|
 |postmethod|integer|null: false|
 |streetadress|integer|null: false|
