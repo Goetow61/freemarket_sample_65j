@@ -1,27 +1,146 @@
-.heder{
+.header{
   background-color: red;
   height: 100px;
   width: 100%;
   vertical-align: baseline;
-  margin: 0px;
   padding: 0px;
   border-width: 0px;
   border-style: initial;
   border-color: initial;
   border-image: initial;
   font: inherit;
+  box-sizing: border-box;
 
-  .header-logo{
+  .heading{
+    height: 40px;
+    width: 1020px;
     display: flex;
     justify-content: space-between;
+    margin-left: auto;
+    margin-right: auto;
+    
+    
 
-    .header-logo__name{
-      height: 36px;
-      width: 134px;
+  .heading-logo{
+    height: 36px;
+    width: 134px;
+    background-color: aqua;
+    
+  }
+
+    .heading__form{
+      height: 40px;
+      width: 841px;
       background-color: blue;
+    }
+  
+  }
 
+  .header-item__btn{
+    height: 44px;
+    width: 1020px;
+    background-color: blueviolet;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 5px;
+    
+
+    .header-item__btn-left{
+      background-color: burlywood;
+      display: flex;
+      justify-content: flex-start;
+
+      .header-item__btn-left-first{
+        height: 36px;
+        width: 150px;
+        margin: 5px;
+      }
+      .header-item__btn-left-second{
+        height: 36px;
+        width: 140px;
+        margin: 5px;
+    }
+  }
+    .header-item__btn-right{
+      background-color: chartreuse;
+      display: flex;
+      justify-content: flex-end;
+
+      .header-item__btn-right-first{
+        height: 32px;
+        width: 110px;
+        margin: 5px;
+      }
+      .header-item__btn-right-second{
+        height: 32px;
+        width: 77px;
+        margin: 5px;
+      }
+    }
+
+  }
+   
+}
+
+.slider-frame{
+  height: 390px;
+  width: 1440px;
+  box-sizing: border-box;
+  position: relative;
+
+  .slider-list{
+    
+
+    button{
+      margin: 0;
+      padding: 0;
+      background: none;
+      border: none;
+      border-radius: 0;
+      outline: none;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
+    }
+    .slide-dots{
+      position: absolute;
+      left: 50%;
+      top: 350px;
+      text-align: center;
+      li{
+        display: inline-block;
+        margin: 0 15px;
+        button{
+          position: relative;
+          text-indent: -9999px;
+          &:before{
+            content: '○';
+            font-size: 15px;
+            text-indent: 0px;
+            color: chartreuse;
+            position: absolute;
+            top: 0;
+            left: 0;
+          }
+        }
+        &.slick-active{
+          button:before{
+            content: '●';
+          }
+        }
+      }
     }
   }
 
-   
+    .slider-list__first{
+      height: 390px;
+      width: 1440px;
+      background-color: darkgray;
+    }
+    .slider-list__second{
+      height: 390px;
+      width: 1440px;
+      background-color: darkkhaki;
+    }
 }
