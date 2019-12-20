@@ -13,12 +13,12 @@
 |birthday|date|null: false|
 |tellnumber|string|null: false, unique: true|
 ### Association
-- has_many :address
+- has_many :addresses
 - has_one :snsacount
-- has_one :cards
-- has_many :evalution
-- has_many :item
-- has_many :like
+- has_one :card
+- has_many :evalutions
+- has_many :items
+- has_many :likes
 
 
 
@@ -86,8 +86,8 @@
 |category_tree_id|integer|null: false, foreign_key: true|
 ### Association
 - belongs_to :user
-- has_many :like
-- has_many :image
+- has_many :likes
+- has_many :images
 - belongs_to :category_tree
 
 
@@ -126,7 +126,7 @@
 |------|----|-------|
 |name|string|null: false, index: true| 
 ### Association
-- has_many :category_tree
+- has_many :category_trees
 
 
 
