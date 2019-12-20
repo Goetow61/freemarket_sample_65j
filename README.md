@@ -11,7 +11,7 @@
 |email|string|null: false, unique: true|
 |password|string|null: false|
 |birthday|date|null: false|
-|tellnumber|integer|null: false, unique: true|
+|tellnumber|string|null: false, unique: true|
 ### Association
 - has_many :address
 - has_one :snsacount
@@ -105,7 +105,7 @@
 |Column|Type|Options|
 |------|----|-------|
 |item_id|integer|null: false, foreign_key: true|
-|image|string|null: false, foreign_key: true|
+|image|string|null: false|
 ### Association
 - belongs_to :item
 
@@ -124,7 +124,7 @@
 ## categoryテーブル
 |Column|Type|Options|
 |------|----|-------|
-|name|string|null: false, foreign_key: true, index: true| 
+|name|string|null: false, index: true| 
 ### Association
 - has_many :category_tree
 
