@@ -2,13 +2,16 @@
   .head-part
     .heading
       %h3.heading-logo
-        mercali
+        メルカリ
       .heading__form
-        -# = f.text_field :content, class: 'form__message',placeholder: '何かお探しですか？'
+        -# = form_for message do |f|
+        -#   = f.text_field :content, class: 'form__message',placeholder: '何かお探しですか？'
     .header-item__btn
       .header-item__btn-left
         .header-item__btn-left-first
+          カテゴリーから探す
         .header-item__btn-left-second
+          ブランドから探す
       .header-item__btn-right
         .header-item__btn-right-first
         .header-item__btn-right-second

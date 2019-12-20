@@ -1,84 +1,84 @@
 .header{
-  background-color: red;
+  background-color: rgb(255, 255, 255);
+  box-shadow: rgba(0, 0, 0, 0.18) 0px 2px 4px;
+  position: relative;
+  z-index: 3;
   height: 100px;
   width: 100%;
-  vertical-align: baseline;
-  padding: 0px;
-  border-width: 0px;
-  border-style: initial;
-  border-color: initial;
-  border-image: initial;
-  font: inherit;
-  box-sizing: border-box;
 
-  .heading{
-    height: 40px;
+  .head-part{
     width: 1020px;
-    display: flex;
-    justify-content: space-between;
-    margin-left: auto;
-    margin-right: auto;
-    
-    
-
-  .heading-logo{
-    height: 36px;
-    width: 134px;
-    background-color: aqua;
-    
-  }
-
-    .heading__form{
-      height: 40px;
-      width: 841px;
-      background-color: blue;
-    }
-  
-  }
-
-  .header-item__btn{
-    height: 44px;
-    width: 1020px;
-    background-color: blueviolet;
     margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    margin-top: 5px;
+    padding: 8px 0px 0px;
+
+    .heading{
+      height: 40px;
+      width: 1020px;
+      display: flex;
+      justify-content: space-between;
+      margin-left: auto;
+      margin-right: auto;
+      
+      
+
+    .heading-logo{
+      height: 36px;
+      width: 134px;
+      background-color: aqua;
+      
+    }
+
+      .heading__form{
+        height: 40px;
+        width: 841px;
+        background-color: blue;
+      }
     
-
-    .header-item__btn-left{
-      background-color: burlywood;
-      display: flex;
-      justify-content: flex-start;
-
-      .header-item__btn-left-first{
-        height: 36px;
-        width: 150px;
-        margin: 5px;
-      }
-      .header-item__btn-left-second{
-        height: 36px;
-        width: 140px;
-        margin: 5px;
-    }
-  }
-    .header-item__btn-right{
-      background-color: chartreuse;
-      display: flex;
-      justify-content: flex-end;
-
-      .header-item__btn-right-first{
-        height: 32px;
-        width: 110px;
-        margin: 5px;
-      }
-      .header-item__btn-right-second{
-        height: 32px;
-        width: 77px;
-        margin: 5px;
-      }
     }
 
-  }
-   
+    .header-item__btn{
+      height: 44px;
+      width: 1020px;
+      // background-color: blueviolet;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      margin-top: 5px;
+      
+
+      .header-item__btn-left{
+        // background-color: burlywood;
+        display: flex;
+        justify-content: flex-start;
+
+        .header-item__btn-left-first{
+          height: 36px;
+          width: 150px;
+          margin: 5px;
+        }
+        .header-item__btn-left-second{
+          height: 36px;
+          width: 140px;
+          margin: 5px;
+      }
+    }
+      .header-item__btn-right{
+        // background-color: chartreuse;
+        display: flex;
+        justify-content: flex-end;
+
+        .header-item__btn-right-first{
+          height: 32px;
+          width: 110px;
+          margin: 5px;
+        }
+        .header-item__btn-right-second{
+          height: 32px;
+          width: 77px;
+          margin: 5px;
+        }
+      }
+
+    }
+  }  
 }
