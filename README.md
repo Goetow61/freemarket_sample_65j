@@ -11,9 +11,9 @@
 |email|string|null: false, unique: true|
 |password|string|null: false|
 |birthday|date|null: false|
-|tellnumber|integer|null: false|
+|tellnumber|integer|null: false, unique: true|
 ### Association
-- has_one :address
+- has_many :address
 - has_one :snsacount
 - has_one :cards
 - has_many :evalution
@@ -26,24 +26,24 @@
 |Column|Type|Options|
 |------|----|-------|
 |user_id|integer|null: false, foreign_key: true|
-|postcode|integer|null: false|
+|postcode|string|null: false|
 |prefecture_code|integer|null: false|
 |address_city|string|null: false|
 |address_street|string|null: false|
 |address_building|string|
 ### Association
-- has_one :user
+- belongs_to :user
 
 
 
 ## snsacountテーブル(device)
 |Column|Type|Options|
 |------|----|-------|
-|user_id|integer|null: false, foreign_key: true|
+|user_id|string|null: false, foreign_key: true|
 |uid|integer|null: false|
 |provider|string|null: false|
 ### Association
-- has_one :user
+- belongs_to :user
 
 
 
@@ -54,7 +54,7 @@
 |customer_id|string|null: false|
 |card_id|string|null: false|
 ### Association
-- has_one :user
+- belongs_to :user
 
 
 ## evalutionテーブル
@@ -78,7 +78,7 @@
 |status|string|null: false|
 |postage|boolean|null: false|
 |postmethod|integer|null: false|
-|streetadress|integer|null: false, foreign_key: true|
+|streetadress|integer|null: false|
 |days|integer|null: false|
 |price|integer|null: false|
 |size|string|
@@ -89,8 +89,6 @@
 - has_many :like
 - has_many :image
 - belongs_to :category_tree
-
-
 
 
 ## likeテーブル
@@ -117,9 +115,11 @@
 |------|----|-------|
 |ancestor_id|integer|null: false| 
 |descendent_id|integer|null: false| 
-|depth|integer|
+|depth|integer|null: false|
 ### Association
 - belongs_to :category
+- has_one :item
+
 
 ## categoryテーブル
 |Column|Type|Options|
