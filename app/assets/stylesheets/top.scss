@@ -8,12 +8,13 @@
     .slick-prev
 {
     left: 100px;
-    color: midnightblue;
+    background-color: midnightblue;
+    z-index: 100;
 }
 .slick-next
 {
     right: 100px;
-    color: midnightblue;
+    background-color: black;
 }
 
     button{
