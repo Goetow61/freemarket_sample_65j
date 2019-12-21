@@ -4,6 +4,22 @@
   position: relative;
   z-index: 3;
 
+  .exhibit-btn{
+    height: 160px;
+    width: 160px;
+    border-radius: 50%;
+    position: fixed;
+    background-color: crimson;
+    color: white;
+    font-size: 22px;
+    font-family: fantasy;
+    text-align: center;
+    padding-top: 32px;
+    box-sizing: border-box;
+    bottom: 30px;
+    right: 30px;
+  }
+
   .head-part{
     width: 78%;
     margin: 0 auto;
