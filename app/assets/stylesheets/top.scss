@@ -5,7 +5,16 @@
   position: relative;
 
   .slider-list{
-    
+    .slick-prev
+{
+    left: 100px;
+    color: midnightblue;
+}
+.slick-next
+{
+    right: 100px;
+    color: midnightblue;
+}
 
     button{
       margin: 0;
