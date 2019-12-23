@@ -5,6 +5,8 @@
   z-index: 3;
   height: 100px;
   width: 100%;
+  font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", "メイリオ", sans-serif;
+  font-weight: 500;
 
   .exhibit-btn{
     height: 160px;
@@ -48,13 +50,13 @@
       width: 100%;
       padding-left: 60px;
 
-      .fuzzy_search__field{
+      .fuzzy_search__label{
         background-color: rgb(245, 245, 245);
         font-size: 16px;
         height: 40px;
         line-height: 1.4em;
         position: relative;
-        width: 100%;
+        width: 763px;
         -webkit-appearance: none;
         border-width: 1px;
         border-style: solid;
@@ -73,6 +75,7 @@
           right: 0px;
           top: 0px;
           width: 40px;
+          line-height: 40px;
           -webkit-appearance: none;
           border-width: initial;
           border-style: none;
@@ -93,39 +96,84 @@
       margin: 0 auto;
       display: flex;
       justify-content: space-between;
-      margin-top: 5px;
+      margin-top: 10px;
       
 
       .header-item__btn-left{
         // background-color: burlywood;
         display: flex;
         justify-content: flex-start;
+        line-height: 44px;
+        .icon-red{
+          color: red;
+        }
+        a{
+          color: inherit;
+          text-decoration: none;
+        }
 
         .header-item__btn-left-first{
           height: 36px;
           width: 150px;
           margin: 5px;
+          font-weight: 600px;
         }
         .header-item__btn-left-second{
           height: 36px;
-          width: 140px;
-          margin: 5px;
+          width: 160px;
+          font-weight: 600px;
+          left: 200px;
+          padding-left: 30px;
       }
     }
       .header-item__btn-right{
-        background-color: chartreuse;
         display: flex;
-        justify-content: flex-end;
+        
+        a{
+        
+          text-decoration: none;
+        }
+
 
         .header-item__btn-right-first{
-          height: 32px;
-          width: 110px;
-          margin: 5px;
+          background-color: rgb(234, 53, 45);
+          color: rgb(255, 255, 255);
+          display: block;
+          font-size: 14px;
+          border-width: 1px;
+          border-style: solid;
+          border-color: rgb(234, 53, 45);
+          border-image: initial;
+          border-radius: 4px;
+          padding: 8px 10px;
+          width: 106px;
+          text-align: center;
+          height: 20px;
+          margin-right: 20px;
+          // height: 32px;
+          // width: 110px;
+          // margin: 5px;
+          // color: blanchedalmond;    
         }
         .header-item__btn-right-second{
-          height: 32px;
-          width: 77px;
-          margin: 5px;
+          background-color: rgb(255, 255, 255);
+          color: rgb(0, 149, 238);
+          display: block;
+          font-size: 14px;
+          border-width: 1px;
+          border-style: solid;
+          border-color: rgb(0, 149, 238);
+          border-image: initial;
+          border-radius: 4px;
+          padding: 8px 10px;
+          transition: all 0.3s ease-out 0s;
+          width: 76px;
+          text-align: center;
+          // height: 32px;
+          // width: 77px;
+          // margin: 5px;
+          // color: #38ae;
+          // border: solid 1px #38aef0;
         }
       }
 
