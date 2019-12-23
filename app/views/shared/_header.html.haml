@@ -8,15 +8,19 @@
           %img{src: "https://www-mercari-jp.akamaized.net/assets/img/common/common/logo.svg?3135490372", width: "150px"}
       .heading__form
         = form_for "#" do |f|
-          -# %input{type: "search"}
-          %label{class: "fuzzy_search__label",placeholder:"  何かお探しですか？"}
-            = icon('fas', 'search')
-            %input{type: "search"}
-          -# %label.fuzzy_search__label
-          -#   = text_field_tag :search, "",class:"fuzzy_search__field",placeholder:"  何かお探しですか？"
-          -#   = icon 'fas', 'search', class: "fuzzy_search__label--icon"
-          -#   = submit_tag 'search', class:"fuzzy_search__label--btn"
-            
+          = f.text_field :content, class: "fuzzy_search__label", placeholder: "  何かお探しですか？"
+          = f.label :image, class: "fuzzy_search__label--btn" do
+            = icon 'fas', 'search', class: "fuzzy_search__label--icon"
+            -# = f.file_field :image, class: ‘hidden’
+        -# = f.submit ‘Send’, class: ‘form__submit’
+          
+    -#       %label{class: "fuzzy_search__label",placeholder:"  何かお探しですか？"}
+    -#         = icon('fas', 'search')
+    -#         %input{type: "search"}
+    -#       %label.fuzzy_search__label
+    -#         = icon 'fas', 'search', class: "fuzzy_search__label--icon"
+    -#         = submit_tag 'search', class:"fuzzy_search__label--btn"
+    -#       = text_field_tag :search, "",class:"fuzzy_search__label",placeholder:"  何かお探しですか？"
     %ul.header-item__btn
       %h2.header-item__btn-left
         %li.header-item__btn-left
@@ -26,12 +30,12 @@
           
         %li.header-item__btn-left-second
           = link_to do
-            = icon 'fas', 'list-ul', class: "icon-red"
+            = icon 'fas', 'tag', class: "icon-red"
             %span ブランドから探す
       .header-item__btn-right
-        =link_to "#", class: "header-item__btn-right-first-sign-up" do
+        =link_to  class: "header-item__btn-right-first-sign-up" do
           .header-item__btn-right-first
-            新規登録
-        =link_to "#", class: "header-item__btn-right-second-login" do
+            新規会員登録
+        =link_to  class: "header-item__btn-right-second-login" do
           .header-item__btn-right-second
             ログイン
