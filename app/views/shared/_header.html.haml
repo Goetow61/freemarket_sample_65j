@@ -8,17 +8,30 @@
           %img{src: "https://www-mercari-jp.akamaized.net/assets/img/common/common/logo.svg?3135490372", width: "150px"}
       .heading__form
         = form_for "#" do |f|
-          %label.fuzzy_search__label
-            = text_field_tag :search, "",class:"fuzzy_search__field",placeholder:"  何かお探しですか？"
-            = icon 'fas', 'search', class: "fuzzy_search__label--icon"
-            = submit_tag 'search', class:"fuzzy_search__label--btn"
+          -# %input{type: "search"}
+          %label{class: "fuzzy_search__label",placeholder:"  何かお探しですか？"}
+            = icon('fas', 'search')
+            %input{type: "search"}
+          -# %label.fuzzy_search__label
+          -#   = text_field_tag :search, "",class:"fuzzy_search__field",placeholder:"  何かお探しですか？"
+          -#   = icon 'fas', 'search', class: "fuzzy_search__label--icon"
+          -#   = submit_tag 'search', class:"fuzzy_search__label--btn"
             
-    .header-item__btn
-      .header-item__btn-left
-        .header-item__btn-left-first
-  
-        .header-item__btn-left-second
-          ブランドから探す
+    %ul.header-item__btn
+      %h2.header-item__btn-left
+        %li.header-item__btn-left
+          = link_to do
+            = icon 'fas', 'list-ul', class: "icon-red"
+            %span カテゴリーから探す
+          
+        %li.header-item__btn-left-second
+          = link_to do
+            = icon 'fas', 'list-ul', class: "icon-red"
+            %span ブランドから探す
       .header-item__btn-right
-        .header-item__btn-right-first
-        .header-item__btn-right-second
+        =link_to "#", class: "header-item__btn-right-first-sign-up" do
+          .header-item__btn-right-first
+            新規登録
+        =link_to "#", class: "header-item__btn-right-second-login" do
+          .header-item__btn-right-second
+            ログイン

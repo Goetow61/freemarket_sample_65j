@@ -100,6 +100,10 @@
         // background-color: burlywood;
         display: flex;
         justify-content: flex-start;
+        line-height: 44px;
+        a{
+          text-decoration: none;
+        }
 
         .header-item__btn-left-first{
           height: 36px;
@@ -108,14 +112,19 @@
         }
         .header-item__btn-left-second{
           height: 36px;
-          width: 140px;
-          margin: 5px;
+          width: 160px;
+          left: 200px;
+          padding-left: 30px;
       }
     }
       .header-item__btn-right{
-        background-color: chartreuse;
         display: flex;
         justify-content: flex-end;
+        line-height: 44px;
+        a{
+          text-decoration: none;
+        }
+
 
         .header-item__btn-right-first{
           height: 32px;
