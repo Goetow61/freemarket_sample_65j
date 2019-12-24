@@ -1,4 +1,5 @@
 = render 'shared/header'
+
 .slider-frame
   .slider-list
     .slider-list__first
@@ -19,89 +20,18 @@
       おもちゃ・ホビー・グッズ
 .contents-main__new
   .contents-main__new__category
-    .contents-main__new__category__header
-      .contents-main__new__category__header__left
-        レディース新着アイテム
-      .contents-main__new__category__header__right
-        = link_to "#" do
-          もっと見る 〉
-    .contents-main__new__category__items
-      .contents-main__new__category__items__card
-        .contents-main__new__category__items__card__img
-          = image_tag "cap.jpg", size: "188x182", alt: "sample1"
-          .contents-main__new__category__items__card__img__money
-            ￥5,000
-        .contents-main__new__category__items__card__text
-          プラダ 帽子
-      .contents-main__new__category__items__card
-        .contents-main__new__category__items__card__img
-          = image_tag "punps.jpg", size: "188x182", alt: "sample1"
-          .contents-main__new__category__items__card__img__money
-            ￥10,000
-        .contents-main__new__category__items__card__text
-          エルメス 鞄
-      .contents-main__new__category__items__card
-        .contents-main__new__category__items__card__img
-          = image_tag "blouse.jpg", size: "188x182", alt: "sample1"
-          .contents-main__new__category__items__card__img__money
-            ￥58,000
-        .contents-main__new__category__items__card__text
-          シャネル 鞄
-      .contents-main__new__category__items__card
-        .contents-main__new__category__items__card__img
-          = image_tag "car1.jpg", size: "188x182", alt: "sample1"
-          .contents-main__new__category__items__card__img__money
-            ￥8,000
-        .contents-main__new__category__items__card__text
-          プラダ 鞄
-      .contents-main__new__category__items__card
-        .contents-main__new__category__items__card__img
-          = image_tag "bird1.jpg", size: "188x182", alt: "sample1"
-          .contents-main__new__category__items__card__img__money
-            ￥900
-        .contents-main__new__category__items__card__text
-          プラダ マニキュア
-      .contents-main__new__category__items__card
-        .contents-main__new__category__items__card__img
-          = image_tag "cap.jpg", size: "188x182", alt: "sample1"
-          .contents-main__new__category__items__card__img__money
-            ￥7,000
-        .contents-main__new__category__items__card__text
-          ディオール 鞄
-      .contents-main__new__category__items__card
-        .contents-main__new__category__items__card__img
-          = image_tag "dress.jpg", size: "188x182", alt: "sample1"
-          .contents-main__new__category__items__card__img__money
-            ￥15,000
-        .contents-main__new__category__items__card__text
-          エルメス スカーフ
-      .contents-main__new__category__items__card
-        .contents-main__new__category__items__card__img
-          = image_tag "pafume.jpg", size: "188x182", alt: "sample1"
-          .contents-main__new__category__items__card__img__money
-            ￥20,000
-        .contents-main__new__category__items__card__text
-          グッチ 鞄
-      .contents-main__new__category__items__card
-        .contents-main__new__category__items__card__img
-          = image_tag "pafume.jpg", size: "188x182", alt: "sample1"
-          .contents-main__new__category__items__card__img__money
-            ￥4,000
-        .contents-main__new__category__items__card__text
-          シャネル 香水
-      .contents-main__new__category__items__card
-        .contents-main__new__category__items__card__img
-          = image_tag "dress.jpg", size: "188x182", alt: "sample1"
-          .contents-main__new__category__items__card__img__money
-            ￥2,000
-        .contents-main__new__category__items__card__text
-          プラダ ハンカチ
-      
     .category-genre-first
+    = render 'shared/contents'
     .category-genre-second
+    = render 'shared/contents'
     .category-genre-third
+    = render 'shared/contents'
     .category-genre-forth
-.contents-main__category
+    = render 'shared/contents'
+
+
+= render 'shared/footer'
+
 -#   = render @ladies
 -#   = render @mens
 -#   = render @appliances
@@ -118,4 +48,3 @@
 -#   = render @luiviton
 -#   = render @supreme
 -#   = render @nike
-= render 'shared/footer'
