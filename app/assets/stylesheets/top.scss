@@ -47,7 +47,6 @@
     &__second{
       height: 390px;
       width: 1440px;
-      background-color:lightblue;
     }
     .slick-prev{
      left: 100px; 
@@ -252,4 +251,8 @@
         content: '〈';
         font-size: 50px;
         background-color: transparent;
+      }
+      a{
+        text-decoration: none;
+        color: #0095EE;
       }
