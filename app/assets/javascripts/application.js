@@ -14,14 +14,3 @@
 //= require rails-ujs
 //= require activestorage
 //= require_tree .
-$(function() {
-  $('.slider-list').slick({
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    autoplay: true,
-    autoplaySpeed: 5000,
-    dots: true,
-    dotsClass: 'slide-dots'
-    
-  });
-});
