@@ -1,3 +1,3 @@
 Rails.application.routes.draw do
-  root to: "registrationacc#index"
+  root to: "registrationaccs#index"
 end
