@@ -28,8 +28,8 @@ gem 'jbuilder', '~> 2.5'
 # gem 'bcrypt', '~> 3.1.7'
 
 # Use ActiveStorage variant
-gem 'carrierwave'
-gem 'mini_magick'
+# gem 'carrierwave'
+# gem 'mini_magick'
 gem 'fog-aws'
 
 # Use Capistrano for deployment
@@ -75,3 +75,13 @@ end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+
+gem 'haml-rails'
+
+gem 'jquery-rails'
+
+gem "font-awesome-sass"
+
+gem 'carrierwave', '~> 2.0'
+
+gem 'mini_magick'

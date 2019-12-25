@@ -1,0 +1,40 @@
+= render 'shared/header'
+
+.slider-frame
+  .slider-list
+    .slider-list__first
+      .slider-list__first__text
+        .slider-list__first__text__comment
+          スマホで かんたん 
+          %br フリマアプリ
+          
+        .slider-list__first__text__sub-comment
+          メルカリはスマホカメラからすぐに出品できる
+          %br
+          購入時も安心な独自システムのアプリです
+
+      .slider-list__first__text__image
+        %ul
+          %li
+            = link_to "#" do
+              = image_tag("https://www-mercari-jp.akamaized.net/assets/img/common/common/app-store.svg?3135490372", width: "170px")
+          %li
+            = link_to "#" do
+              = image_tag("https://www-mercari-jp.akamaized.net/assets/img/common/common/google-play.svg?3135490372", width: "170px")
+
+          
+    .slider-list__second
+      = image_tag "car1.jpg", size: "1440x390", alt: "sample2"
+.items
+  .categorys
+    = render 'shared/contents-top'
+    = render 'shared/contents-header'
+    
+      
+  .blands
+    = render 'shared/contents-top'
+    = render 'shared/contents-header'
+    
+
+= render 'shared/footer'
+

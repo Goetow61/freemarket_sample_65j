@@ -1,0 +1,173 @@
+body{
+  font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", "メイリオ", sans-serif;
+ }
+.header{
+  background-color: rgb(255, 255, 255);
+  box-shadow: rgba(0, 0, 0, 0.18) 0px 2px 4px;
+  position: relative;
+  z-index: 3;
+  height: 100px;
+  width: 100%;
+  font-weight: 500;
+
+  .exhibit-btn{
+    height: 160px;
+    width: 160px;
+    border-radius: 50%;
+    position: fixed;
+    background-color: crimson;
+    font-size: 22px;
+    text-align: center;
+    padding-top: 32px;
+    box-sizing: border-box;
+    bottom: 30px;
+    right: 30px;
+    display: block;
+    align-items: center;
+    a {
+      text-decoration: none;
+      color: white;
+    }
+    i {
+      font-size: 60px;
+      top: 60px;
+    }
+  }
+
+  .head-part{
+    width: 1020px;
+    margin: 0 auto;
+    padding: 8px 0px 0px;
+
+    .heading{
+      height: 40px;
+      width: 1020px;
+      display: flex;
+      justify-content: space-between;
+      margin-left: auto;
+      margin-right: auto;
+      &-logo{
+        height: 36px;
+        width: 134px;
+      }
+    
+      &__form{
+        position: relative;
+        width: 100%;
+        padding-left: 60px;
+
+      .fuzzy_search__label{
+        background-color: rgb(245, 245, 245);
+        font-size: 16px;
+        height: 40px;
+        line-height: 1.4em;
+        position: relative;
+        width: 763px;
+        -webkit-appearance: none;
+        border-width: 1px;
+        border-style: solid;
+        border-color: rgb(204, 204, 204);
+        border-image: initial;
+        border-radius: 4px;
+        outline: none;
+        padding: 0px 50px 0px 10px;
+        transition: all 0.3s ease-out 0s;
+      
+        &--icon{
+          background-color: transparent;
+          cursor: pointer;
+          height: 40px;
+          position: absolute;
+          right: 0px;
+          top: 0px;
+          width: 40px;
+          line-height: 40px;
+          -webkit-appearance: none;
+          border-width: initial;
+          border-style: none;
+          border-color: initial;
+          border-image: initial;
+          border-radius: 0px 4px 4px 0px;
+          padding: 0px;
+        }
+      }
+     }
+   }
+
+    .header-item__btn{
+      height: 44px;
+      width: 1020px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      margin-top: 10px;
+      
+      &-left{
+        display: flex;
+        justify-content: flex-start;
+        line-height: 44px;
+        .icon-red{
+          color: red;
+        }
+        a{
+          color: inherit;
+          text-decoration: none;
+        }
+
+        &-first{
+          height: 36px;
+          width: 150px;
+          margin: 5px;
+          font-weight: 600px;
+        }
+        &-second{
+          height: 36px;
+          width: 160px;
+          font-weight: 600px;
+          left: 200px;
+          padding-left: 30px;
+      }
+    }
+      &-right{
+        display: flex;
+        
+        a{
+          text-decoration: none;
+        }
+
+        &-first{
+          background-color: rgb(234, 53, 45);
+          color: rgb(255, 255, 255);
+          display: block;
+          font-size: 14px;
+          border-width: 1px;
+          border-style: solid;
+          border-color: rgb(234, 53, 45);
+          border-image: initial;
+          border-radius: 4px;
+          padding: 8px 10px;
+          width: 106px;
+          text-align: center;
+          height: 20px;
+          margin-right: 20px;   
+        }
+        &-second{
+          background-color: rgb(255, 255, 255);
+          color: rgb(0, 149, 238);
+          display: block;
+          font-size: 14px;
+          border-width: 1px;
+          border-style: solid;
+          border-color: rgb(0, 149, 238);
+          border-image: initial;
+          border-radius: 4px;
+          padding: 8px 10px;
+          transition: all 0.3s ease-out 0s;
+          width: 76px;
+          text-align: center;
+         }
+    }
+   }  
+  }
+ }   
+ 

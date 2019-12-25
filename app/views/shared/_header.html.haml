@@ -1,0 +1,34 @@
+.header
+  .exhibit-btn
+    = link_to "#" do
+      出品
+      .exhibit-btn__icon
+      = icon 'fas', 'camera'
+  .head-part
+    .heading
+      %h3.heading-logo
+        = link_to root_path do
+          = image_tag "fmarket_logo_red.svg", size: "134x36", alt: "sample2"
+      .heading__form
+        = form_for "#" do |f|
+          = f.text_field :content, class: "fuzzy_search__label", placeholder: "  何かお探しですか？"
+          = f.label :image, class: "fuzzy_search__label--btn" do
+            = icon 'fas', 'search', class: "fuzzy_search__label--icon"
+    %ul.header-item__btn
+      %h2.header-item__btn-left
+        %li.header-item__btn-left
+          = link_to do
+            = icon 'fas', 'list-ul', class: "icon-red"
+            %span カテゴリーから探す
+          
+        %li.header-item__btn-left-second
+          = link_to do
+            = icon 'fas', 'tag', class: "icon-red"
+            %span ブランドから探す
+      .header-item__btn-right
+        =link_to  class: "header-item__btn-right-first-sign-up" do
+          .header-item__btn-right-first
+            新規会員登録
+        =link_to  class: "header-item__btn-right-second-login" do
+          .header-item__btn-right-second
+            ログイン
