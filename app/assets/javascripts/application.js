@@ -15,7 +15,7 @@
 //= require activestorage
 //= require_tree .
 $(function() {
-$('.slider-list').slick({
+  $('.slider-list').slick({
     slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: true,
@@ -23,5 +23,5 @@ $('.slider-list').slick({
     dots: true,
     dotsClass: 'slide-dots'
     
-});
+  });
 });
