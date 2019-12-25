@@ -36,7 +36,9 @@
     .contents-main__new__category__items{
       height: 550px;
       width: 1020px;
-      column-count: 5;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+
 
       &__card{
         height: 252px;

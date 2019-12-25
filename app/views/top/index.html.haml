@@ -23,45 +23,15 @@
 
     .slider-list__second
       = image_tag "car1.jpg", size: "1440x390", alt: "sample2"
-.category
-  .category__populer
-    人気のカテゴリー
-  .category__genre
-    .category__genre__list
-      レディース
-    .category__genre__list
-      メンズ
-    .category__genre__list
-      家電・スマホ・カメラ
-    .category__genre__list
-      おもちゃ・ホビー・グッズ
-.contents-main__new
-  .contents-main__new__category
-    .category-genre-first
-    = render 'shared/contents'
-    .category-genre-second
-    = render 'shared/contents'
-    .category-genre-third
-    = render 'shared/contents'
-    .category-genre-forth
-    = render 'shared/contents'
-
+.items
+  .categorys
+    = render 'shared/contents-top'
+    = render 'shared/contents-main'
+      
+  .blands
+    = render 'shared/contents-top'
+    = render 'shared/contents-main'
+  
 
 = render 'shared/footer'
 
--#   = render @ladies
--#   = render @mens
--#   = render @appliances
--#   = render @toys
--#   .bland
--#   .bland-populer
--#   .bland-genre
--#     .bland-genre-first
--#     .bland-genre-second
--#     .bland-genre-third
--#     .bland-genre-forth
--# .contents-main__bland
--#   = render @channel
--#   = render @luiviton
--#   = render @supreme
--#   = render @nike
