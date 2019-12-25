@@ -22,13 +22,12 @@
         height: 33px;
         width: 929px;
         font-size: 24px;
-        font-family: fantasy;
+        font-weight: 600;
       }
       &__right{
         height: 24px;
         width: 91px;
         font-size: 14px;
-        font-family: fantasy;
         padding: 5px;
         color: #0095EE;
       }
@@ -58,7 +57,6 @@
           box-sizing: border-box;
           &__money{
             font-size: 17px;
-            font-family: fantasy;
             color:#FFFFFF;
             height: 28px;
             width: 78px;

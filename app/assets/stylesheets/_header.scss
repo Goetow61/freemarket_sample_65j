@@ -1,3 +1,6 @@
+body{
+  font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", "メイリオ", sans-serif;
+ }
 .header{
   background-color: rgb(255, 255, 255);
   box-shadow: rgba(0, 0, 0, 0.18) 0px 2px 4px;
@@ -5,7 +8,6 @@
   z-index: 3;
   height: 100px;
   width: 100%;
-  font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", "メイリオ", sans-serif;
   font-weight: 500;
 
   .exhibit-btn{
@@ -15,7 +17,6 @@
     position: fixed;
     background-color: crimson;
     font-size: 22px;
-    font-family: fantasy;
     text-align: center;
     padding-top: 32px;
     box-sizing: border-box;
@@ -169,3 +170,4 @@
    }  
   }
  }   
+ 
