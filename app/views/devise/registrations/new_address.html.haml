@@ -1,0 +1,36 @@
+%h2 住所入力
+= form_for @address do |f|
+  = render "devise/shared/error_messages", resource: @address
+  .field
+    = f.label :お名前
+    %br/
+    = f.text_field :last_name, placeholder: "例) 山田"
+    = f.text_field :first_name, placeholder: "例) 彩"
+  .field
+    = f.label :お名前カナ
+    %br/
+    = f.text_field :last_name_kana, placeholder: "例) ヤマダ"
+    = f.text_field :first_name_kana, placeholder: "例) アヤ"
+  .field
+    = f.label :郵便番号
+    %br/
+    = f.text_field :postal_code, placeholder: "例) 123-4567"
+  .field
+    = f.label :都道府県
+    %br/
+    = f.select :prefecture, Address.locations.keys, {default: '北海道'}, class: 'form-control btn btn-info'
+  .field
+    = f.label :市区町村
+    %br/
+    = f.text_field :city, placeholder: "例) 横浜市緑区"
+  .field
+    = f.label :番地
+    %br/
+    = f.text_field :address, placeholder: "例) 青山1-1-1"
+  .field
+    = f.label :建物名
+    %br/
+    = f.text_field :building_name, placeholder: "例) アジアビル901"
+  .actions
+    = f.submit "次へ進む"
+-# = render "devise/shared/links"
