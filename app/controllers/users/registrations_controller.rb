@@ -35,7 +35,7 @@ class Users::RegistrationsController < Devise::RegistrationsController
    session["address"] = @address.attributes
    @card = Card.new
    render :new_card
-   # @user.build_address(@address.attributes)
+   
  end
  
  def create_card
@@ -54,7 +54,6 @@ class Users::RegistrationsController < Devise::RegistrationsController
      @card = Card.new(user_id: @user.id, customer_id: customer.id, card_id: customer.default_card)
      if @card.save
        sign_in(:user, @user)
-       # redirect_to action: root
      else
        redirect_to action: "create_card"
      end
