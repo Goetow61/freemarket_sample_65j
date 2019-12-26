@@ -9,11 +9,16 @@
     = f.label :メールアドレス
     %br/
     = f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "PC・携帯どちらでも可"
-  .field
-    = f.label :パスワード
-    -# - if @minimum_password_length
-    %br/
-    = f.password_field :password, autocomplete: "new-password", placeholder: "7文字以上の半角英数字"
+  
+  - if @sns_id.present?
+    = hidden_field_tag :sns_auth, true
+  - else
+    .field
+      = f.label :パスワード
+      
+      %br/
+      = f.password_field :password, autocomplete: "new-password", placeholder: "7文字以上の半角英数字"
+   
   .field
     = f.label :"お名前(全角)"
     %br/

@@ -15,6 +15,7 @@ class Users::RegistrationsController < Devise::RegistrationsController
  require "payjp"
  
  def create
+  params[:sns_auth] == 'true' ? params[:user][:password] = Devise.friendly_token : "";
    @user = User.new(sign_up_params)
    unless @user.valid?
      flash.now[:alert] = @user.errors.full_messages
