@@ -1,6 +1,7 @@
 body{
   font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", "メイリオ", sans-serif;
  }
+ 
 .header{
   background-color: rgb(255, 255, 255);
   box-shadow: rgba(0, 0, 0, 0.18) 0px 2px 4px;
@@ -9,30 +10,6 @@ body{
   height: 100px;
   width: 100%;
   font-weight: 500;
-
-  .exhibit-btn{
-    height: 160px;
-    width: 160px;
-    border-radius: 50%;
-    position: fixed;
-    background-color: crimson;
-    font-size: 22px;
-    text-align: center;
-    padding-top: 32px;
-    box-sizing: border-box;
-    bottom: 30px;
-    right: 30px;
-    display: block;
-    align-items: center;
-    a {
-      text-decoration: none;
-      color: white;
-    }
-    i {
-      font-size: 60px;
-      top: 60px;
-    }
-  }
 
   .head-part{
     width: 1020px;
@@ -56,43 +33,43 @@ body{
         width: 100%;
         padding-left: 60px;
 
-      .fuzzy_search__label{
-        background-color: rgb(245, 245, 245);
-        font-size: 16px;
-        height: 40px;
-        line-height: 1.4em;
-        position: relative;
-        width: 763px;
-        -webkit-appearance: none;
-        border-width: 1px;
-        border-style: solid;
-        border-color: rgb(204, 204, 204);
-        border-image: initial;
-        border-radius: 4px;
-        outline: none;
-        padding: 0px 50px 0px 10px;
-        transition: all 0.3s ease-out 0s;
-      
-        &--icon{
-          background-color: transparent;
-          cursor: pointer;
+        .fuzzy_search__label{
+          background-color: rgb(245, 245, 245);
+          font-size: 16px;
           height: 40px;
-          position: absolute;
-          right: 0px;
-          top: 0px;
-          width: 40px;
-          line-height: 40px;
+          line-height: 1.4em;
+          position: relative;
+          width: 763px;
           -webkit-appearance: none;
-          border-width: initial;
-          border-style: none;
-          border-color: initial;
+          border-width: 1px;
+          border-style: solid;
+          border-color: rgb(204, 204, 204);
           border-image: initial;
-          border-radius: 0px 4px 4px 0px;
-          padding: 0px;
+          border-radius: 4px;
+          outline: none;
+          padding: 0px 50px 0px 10px;
+          transition: all 0.3s ease-out 0s;
+        
+          &--icon{
+            background-color: transparent;
+            cursor: pointer;
+            height: 40px;
+            position: absolute;
+            right: 0px;
+            top: 0px;
+            width: 40px;
+            line-height: 40px;
+            -webkit-appearance: none;
+            border-width: initial;
+            border-style: none;
+            border-color: initial;
+            border-image: initial;
+            border-radius: 0px 4px 4px 0px;
+            padding: 0px;
+          }
         }
       }
-     }
-   }
+    }
 
     .header-item__btn{
       height: 44px;
@@ -126,8 +103,8 @@ body{
           font-weight: 600px;
           left: 200px;
           padding-left: 30px;
+        }
       }
-    }
       &-right{
         display: flex;
         
@@ -165,9 +142,8 @@ body{
           transition: all 0.3s ease-out 0s;
           width: 76px;
           text-align: center;
-         }
+        }
+      }
     }
-   }  
   }
- }   
- 
+}
