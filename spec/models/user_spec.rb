@@ -6,16 +6,15 @@ RSpec.describe User, type: :model do
 
     it "nicknameが空では登録不可" do
       user = build(:user, nickname: nil)
-      # binding.pry
       user.valid?
       expect(user.errors[:nickname]).to include("can't be blank")
     end
 
-    # it "nicknameが16文字以上だと登録不可" do
-    #   user = build(:user, nickname: "aaaaa aaaaa aaaaaa")
-    #   user.valid?
-    #   expect(user.errors[:nickname][0]).to include("は15文字以内で入力してください")
-    # end
+    it "nicknameが16文字以上だと登録不可" do
+      user = build(:user, nickname: "aaaaaaaaaaaaaaaaa")
+      user.valid?
+      expect(user.errors[:nickname][0]).to include("is too long (maximum is 15 characters)")
+    end
 
     it "emailが空では登録不可" do
       user = build(:user, email: "")
@@ -77,18 +76,18 @@ RSpec.describe User, type: :model do
     end
 
 
-    # it "first_nameが16文字以上だと登録不可" do
-    #   user = build(:user, first_name: "瀬瀬瀬瀬瀬瀬瀬瀬瀬瀬瀬瀬瀬瀬瀬瀬")
-    #   user.valid?
-    #   expect(user.errors[:first_name][0]).to include("は15文字以内で入力してください")
-    # end
+    it "first_nameが16文字以上だと登録不可" do
+      user = build(:user, first_name: "瀬瀬瀬瀬瀬瀬瀬瀬瀬瀬瀬瀬瀬瀬瀬瀬")
+      user.valid?
+      expect(user.errors[:first_name][0]).to include("is too long (maximum is 15 characters)")
+    end
 
 
-    # it "first_nameに漢字以外が含まれると登録不可 " do
-    #   user = build(:user, first_name: "瀬瀬a")
-    #   user.valid?
-    #   expect(user.errors[:first_name][0]).to include("は不正な値です")
-    # end
+    it "first_nameに漢字以外が含まれると登録不可 " do
+      user = build(:user, first_name: "瀬瀬a")
+      user.valid?
+      expect(user.errors[:first_name][0]).to include("is invalid")
+    end
 
     it "last_nameが空だと登録不可" do
       user = build(:user, last_name: nil)
@@ -96,18 +95,18 @@ RSpec.describe User, type: :model do
       expect(user.errors[:last_name]).to include("can't be blank")
     end
 
-    # it "last_nameが16文字以上だと登録不可" do
-    #   user = build(:user, last_name: "瀬瀬瀬瀬瀬瀬瀬瀬瀬瀬瀬瀬瀬瀬瀬瀬")
-    #   user.valid?
-    #   expect(user.errors[:last_name][0]).to include("は15文字以内で入力してください")
-    # end
+    it "last_nameが16文字以上だと登録不可" do
+      user = build(:user, last_name: "瀬瀬瀬瀬瀬瀬瀬瀬瀬瀬瀬瀬瀬瀬瀬瀬")
+      user.valid?
+      expect(user.errors[:last_name][0]).to include("is too long (maximum is 15 characters)")
+    end
 
 
-    # it "last_nameに漢字以外が含まれると登録不可 " do
-    #   user = build(:user, l_name_kanji: "瀬瀬a")
-    #   user.valid?
-    #   expect(user.errors[:l_name_kanji][0]).to include("は不正な値です")
-    # end
+    it "last_nameに漢字以外が含まれると登録不可 " do
+      user = build(:user, last_name: "瀬瀬a")
+      user.valid?
+      expect(user.errors[:last_name][0]).to include("is invalid")
+    end
 
 
     it "first_name_kanaが空だと登録不可" do
@@ -117,18 +116,18 @@ RSpec.describe User, type: :model do
     end
 
 
-    # it "first_name_kanaが16文字以上だと登録不可" do
-    #   user = build(:user, first_name_kana: "アアアアアアアアアアアアアアアア")
-    #   user.valid?
-    #   expect(user.errors[:first_name_kana][0]).to include("は15文字以内で入力してください")
-    # end
+    it "first_name_kanaが16文字以上だと登録不可" do
+      user = build(:user, first_name_kana: "アアアアアアアアアアアアアアアア")
+      user.valid?
+      expect(user.errors[:first_name_kana][0]).to include("is too long (maximum is 15 characters)")
+    end
 
 
-    # it "first_name_kanaにカナ以外が含まれると登録不可 " do
-    #   user = build(:user, first_name_kana: "トトa")
-    #   user.valid?
-    #   expect(user.errors[:first_name_kana][0]).to include("は不正な値です")
-    # end
+    it "first_name_kanaにカナ以外が含まれると登録不可 " do
+      user = build(:user, first_name_kana: "トトa")
+      user.valid?
+      expect(user.errors[:first_name_kana][0]).to include("is invalid")
+    end
 
 
     it "last_name_kanaが空だと登録不可" do
@@ -138,19 +137,18 @@ RSpec.describe User, type: :model do
     end
 
 
-    # it "last_name_kanaが16文字以上だと登録不可" do
-    #   user = build(:user, last_name_kana: "ウアウアウアウアウアウアウアウア")
-    #   user.valid?
-    #   expect(user.errors[:last_name_kana][0]).to include("は15文字以内で入力してください")
-    # end
+    it "last_name_kanaが16文字以上だと登録不可" do
+      user = build(:user, last_name_kana: "ウアウアウアウアウアウアウアウア")
+      user.valid?
+      expect(user.errors[:last_name_kana][0]).to include("is too long (maximum is 15 characters)")
+    end
 
 
-    # it "last_name_kanaにカナ以外が含まれると登録不可 " do
-    #   user = build(:user, last_name_kana: "カナa")
-    #   binding.pry
-    #   user.valid?
-    #   expect(user.errors[:last_name_kana][0]).to include("は不正な値です")
-    # end
+    it "last_name_kanaにカナ以外が含まれると登録不可 " do
+      user = build(:user, last_name_kana: "カナa")
+      user.valid?
+      expect(user.errors[:last_name_kana][0]).to include("is invalid")
+    end
 
 
     it "birthdayが空だと登録不可" do
@@ -159,10 +157,10 @@ RSpec.describe User, type: :model do
       expect(user.errors[:birthday]).to include("can't be blank")
     end
 
-    # it "すべて満たしていれば登録可" do
-    #   user = build(:user)
-    #   expect(user).to be_valid
-    # end
+    it "すべて満たしていれば登録可" do
+      user = build(:user)
+      expect(user).to be_valid
+    end
 
 
   end
