@@ -70,11 +70,11 @@ RSpec.describe User, type: :model do
     end
 
 
-    # it "first_nameが空だと登録不可" do
-    #   user = build(:user, first_name: nil)
-    #   user.valid?
-    #   expect(user.errors[:first_name]).to include("を入力してください")
-    # end
+    it "first_nameが空だと登録不可" do
+      user = build(:user, first_name: nil)
+      user.valid?
+      expect(user.errors[:first_name]).to include("can't be blank")
+    end
 
 
     # it "first_nameが16文字以上だと登録不可" do
@@ -90,11 +90,11 @@ RSpec.describe User, type: :model do
     #   expect(user.errors[:first_name][0]).to include("は不正な値です")
     # end
 
-    # it "last_nameが空だと登録不可" do
-    #   user = build(:user, last_name: nil)
-    #   user.valid?
-    #   expect(user.errors[:last_name]).to include("を入力してください")
-    # end
+    it "last_nameが空だと登録不可" do
+      user = build(:user, last_name: nil)
+      user.valid?
+      expect(user.errors[:last_name]).to include("can't be blank")
+    end
 
     # it "last_nameが16文字以上だと登録不可" do
     #   user = build(:user, last_name: "瀬瀬瀬瀬瀬瀬瀬瀬瀬瀬瀬瀬瀬瀬瀬瀬")
@@ -110,11 +110,11 @@ RSpec.describe User, type: :model do
     # end
 
 
-    # it "first_name_kanaが空だと登録不可" do
-    #   user = build(:user, first_name_kana: nil)
-    #   user.valid?
-    #   expect(user.errors[:first_name_kana]).to include("を入力してください")
-    # end
+    it "first_name_kanaが空だと登録不可" do
+      user = build(:user, first_name_kana: nil)
+      user.valid?
+      expect(user.errors[:first_name_kana]).to include("can't be blank")
+    end
 
 
     # it "first_name_kanaが16文字以上だと登録不可" do
@@ -131,11 +131,11 @@ RSpec.describe User, type: :model do
     # end
 
 
-    # it "last_name_kanaが空だと登録不可" do
-    #   user = build(:user, last_name_kana: nil)
-    #   user.valid?
-    #   expect(user.errors[:last_name_kana]).to include("を入力してください")
-    # end
+    it "last_name_kanaが空だと登録不可" do
+      user = build(:user, last_name_kana: nil)
+      user.valid?
+      expect(user.errors[:last_name_kana]).to include("can't be blank")
+    end
 
 
     # it "last_name_kanaが16文字以上だと登録不可" do
