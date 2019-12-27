@@ -23,44 +23,44 @@ RSpec.describe User, type: :model do
       expect(user.errors[:email]).to include("can't be blank")
     end
 
-    # it "emailが重複すると登録不可" do
-    #   create(:user)
-    #   another_user = build(:user)
-    #   another_user.valid?
-    #   expect(another_user.errors[:email]).to include("はすでに存在します")
-    # end
+    it "emailが重複すると登録不可" do
+      create(:user)
+      another_user = build(:user)
+      another_user.valid?
+      expect(another_user.errors[:email]).to include("has already been taken")
+    end
 
-    # it "emailが@を含まないと登録不可 " do
-    #   user = build(:user, email: "aaaaa")
-    #   user.valid?
-    #   expect(user.errors[:email][0]).to include("は不正な値です")
-    # end
+    it "emailが@を含まないと登録不可 " do
+      user = build(:user, email: "aaaaa")
+      user.valid?
+      expect(user.errors[:email][0]).to include("is invalid")
+    end
 
-    # it "emailの@の前に文字がないと登録不可 " do
-    #   user = build(:user, email: "@aaa")
-    #   user.valid?
-    #   expect(user.errors[:email][0]).to include("は不正な値です")
-    # end
+    it "emailの@の前に文字がないと登録不可 " do
+      user = build(:user, email: "@aaa")
+      user.valid?
+      expect(user.errors[:email][0]).to include("is invalid")
+    end
 
-    # it "emailの@の後に文字がないと登録不可" do
-    #   user = build(:user, email: "aaaa@")
-    #   user.valid?
-    #   expect(user.errors[:email][0]).to include("は不正な値です")
-    # end
-
-
-    # it "passwordが空だと登録不可" do
-    #   user = build(:user, password: nil)
-    #   user.valid?
-    #   expect(user.errors[:password]).to include("を入力してください")
-    # end
+    it "emailの@の後に文字がないと登録不可" do
+      user = build(:user, email: "aaaa@")
+      user.valid?
+      expect(user.errors[:email][0]).to include("is invalid")
+    end
 
 
-    # it "password_confirmationが空だと登録不可" do
-    #   user = build(:user, password_confirmation: "")
-    #   user.valid?
-    #   expect(user.errors[:password_confirmation]).to include("とPasswordの入力が一致しません")
-    # end
+    it "passwordが空だと登録不可" do
+      user = build(:user, password: nil)
+      user.valid?
+      expect(user.errors[:password]).to include("can't be blank")
+    end
+
+
+    it "password_confirmationが一致しないと登録不可" do
+      user = build(:user, password_confirmation: "")
+      user.valid?
+      expect(user.errors[:password_confirmation]).to include("doesn't match Password")
+    end
 
 
     it "passwordが6文字以下だと登録不可" do
@@ -144,18 +144,20 @@ RSpec.describe User, type: :model do
     #   expect(user.errors[:last_name_kana][0]).to include("は15文字以内で入力してください")
     # end
 
+
     # it "last_name_kanaにカナ以外が含まれると登録不可 " do
     #   user = build(:user, last_name_kana: "カナa")
+    #   binding.pry
     #   user.valid?
     #   expect(user.errors[:last_name_kana][0]).to include("は不正な値です")
     # end
 
 
-    # it "birthdayが空だと登録不可" do
-    #   user = build(:user, birthday: nil)
-    #   user.valid?
-    #   expect(user.errors[:birthday]).to include("を入力してください")
-    # end
+    it "birthdayが空だと登録不可" do
+      user = build(:user, birthday: nil)
+      user.valid?
+      expect(user.errors[:birthday]).to include("can't be blank")
+    end
 
     # it "すべて満たしていれば登録可" do
     #   user = build(:user)
