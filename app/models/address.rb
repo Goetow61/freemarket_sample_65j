@@ -1,6 +1,16 @@
 class Address < ApplicationRecord
+
+  kanji = /\A[一-龥]+\z/
+  kana = /\A([ァ-ン]|ー)+\z/
+
   belongs_to :user, optional: true
-  validates :last_name, :first_name, :last_name_kana, :first_name_kana, :postal_code, :prefecture, :city, :address ,presence: true
+  validates :prefecture, :city, :address ,presence: true
+  validates :postal_code, presence: true, length: { is: 8 }
+  validates :last_name, presence: true, length: { maximum: 15 }, format: { with: kanji }
+  validates :first_name, presence: true, length: { maximum: 15 }, format: { with: kanji }
+  validates :last_name_kana, presence: true, length: { maximum: 15 }, format: { with: kana }
+  validates :first_name_kana, presence: true, length: { maximum: 15 }, format: { with: kana }
+
 
 
 
