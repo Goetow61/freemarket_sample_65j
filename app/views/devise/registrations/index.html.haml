@@ -1,9 +1,46 @@
-%h1 トップページ
-- if user_signed_in?
-  %h2 ログインしています
-  = link_to "ログアウト", destroy_user_session_path, method: :delete
-- else
-  %h2 ログインしていません
-  = link_to "メールアドレスで登録", new_user_registration_path
-  = link_to 'Facebookで登録', user_facebook_omniauth_authorize_path, method: :post
-  = link_to 'Googleで登録', user_google_oauth2_omniauth_authorize_path, method: :post
+-# %h1 トップページ
+-# - if user_signed_in?
+-#   %h2 ログインしています
+-#   = link_to "ログアウト", destroy_user_session_path, method: :delete
+-# - else
+-#   %h2 ログインしていません
+
+
+.signup__container
+  .signup__simple__header
+    .signup__simple__header__logo
+      = link_to root_path do
+        = image_tag "fmarket_logo_red.svg", size: "150x120", alt: "mercali" 
+  .signup-index-main
+    .signup-index-main__head 
+      新規会員登録
+    .signup-submit-button-form
+      .signup-index-mail-box
+        = link_to new_user_registration_path do
+          = icon "fa","envelope"
+          メールアドレスで登録する
+
+      .signup-index-facebook-box
+        = link_to user_facebook_omniauth_authorize_path, method: :post do
+          %i.fab.fa-facebook-square
+          Facebookで登録する
+
+      .signup-index-google-box
+        = link_to user_google_oauth2_omniauth_authorize_path, method: :post do
+          .main__conect__lists__google__btn
+            %i.fab.fa-google
+            Googleで登録する
+          .main__conect__lists__google__icon
+          
+
+
+  = render "shares/regacc_footer"
+
+
+
+
+
+
+
+
+
