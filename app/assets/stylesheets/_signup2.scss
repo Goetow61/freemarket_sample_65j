@@ -1,0 +1,67 @@
+.single-main {
+  display: block;
+  background: #f5f5f5;
+}
+
+.l-single-container {
+  width: 700px;
+  margin: 0 auto;
+  background: #fff;
+}
+
+
+.l-single-head__registration {
+  font-size: 22px;
+  font-weight: bold;
+  padding: 32px;
+  line-height: 33px;
+  text-align: center;
+}
+
+.l-single-head__registration__form{
+  padding: 24px 16px 40px;
+  border-top: 1px solid rgb(245, 245, 245);
+}
+
+.l-single-content{
+  max-width: 343px;
+  margin: 0px auto; 
+}
+
+.l-single-content__nickname{
+  margin: 0;
+}
+
+label {
+  font-weight: 600;
+  font-size: 13px;
+}
+
+
+.l-single-content__require {
+  background: #ea352d;
+  margin: 0 0 0 8px;
+  padding: 2px 4px;
+  border-radius: 2px;
+  color: #fff;
+  font-size: 12px;
+  right: 12px;
+}
+
+
+#user_nickname {
+  width: 100%;
+  margin: 8px 0 0;
+  height: 48px;
+  padding: 10px 16px 8px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  line-height: 1.5;
+  font-size: 16px;
+  background: #fff;
+}
+
+
+.l-single-content__email{
+  margin: 24px 0 0;
+}
