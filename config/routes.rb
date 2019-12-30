@@ -10,5 +10,5 @@ Rails.application.routes.draw do
     post 'card',      to: 'users/registrations#create_card'
   end
   root to: 'top#index'
-  
+  resources :items, only: [ :index, :show]
 end
