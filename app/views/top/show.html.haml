@@ -1,72 +1,89 @@
 = render 'shared/header'
-.main-content
-  
+.top-show
+  -# .main-content
   .detail-area
     .title
-      .title__itemname
+      %h1{ class:'title__itemname' }
+        パンツ ズボン
+      -# スマホにだけ表示される情報っぽい
       .title__overview
+        『パンツズボン』は、14回の取引実績を持つNatsuruさんから出品されました。パンツ/ベビー・キッズの商品で、山口県から1〜2日で発送されます。
     .detail
       .left-preview
         .left-preview__bigone
+          = image_tag "sample_cat1.jpg", size:"300x300", alt: "sample1"
         .left-preview__smallten
+          = image_tag "sample_cat1.jpg", size: "60x60", alt: "sample1", class:'smallpreview'
+          = image_tag "sample_cat2.jpg", size: "60x60", alt: "sample2", class:'smallpreview'
+          = image_tag "sample_cat3.jpg", size: "60x60", alt: "sample3", class:'smallpreview'
+          = image_tag "sample_cat4.jpg", size: "60x60", alt: "sample4", class:'smallpreview'
+          = image_tag "sample_cat5.jpg", size: "60x60", alt: "sample5", class:'smallpreview'
+          = image_tag "sample_cat6.jpg", size: "60x60", alt: "sample6", class:'smallpreview'
+          = image_tag "sample_cat7.jpg", size: "60x60", alt: "sample7", class:'smallpreview'
       .right-table
         %table{ class: 'right-table__sellar' }
           %tr
-            %th
+            %th{ class: 'right-table__sellar--heading'}
               出品者
-            %th
+            %th{ class: 'right-table__sellar--value'}
               ユキダルマ
               -# リンクが必要
-                %br
-              good normal bad
+              %br
+              %i.fas.fa-smile
+                %span
+                  0 
+              %i.fas.fa-meh
+                %span
+                  0 
+              %i.fas.fa-frown
+                %span
+                  0
           %tr
-            %th
+            %th{ class: 'right-table__sellar--heading'}
               カテゴリー
-            %th
-              レディース
+            %th{ class: 'right-table__sellar--value'}
+              %p レディース
+              -# リンクが必要            
+              %p >マタニティ
               -# リンクが必要
-                %br
-              >マタニティ
-              -# リンクが必要
-                %br
-              >アウター
+              %p >アウター
               -# リンクが必要
           %tr
-            %th
+            %th{ class: 'right-table__sellar--heading'}
               ブランド
-            %th
+            %th{ class: 'right-table__sellar--value'}
               スウィートマミー
               -# ブランド一覧へのリンクが必要。
           %tr
-            %th
+            %th{ class: 'right-table__sellar--heading'}
               商品のサイズ
-            %th
+            %th{ class: 'right-table__sellar--value'}
               L
           %tr
-            %th
+            %th{ class: 'right-table__sellar--heading'}
               商品の状態
-            %th
+            %th{ class: 'right-table__sellar--value'}
               新品、未使用
           %tr
-            %th
+            %th{ class: 'right-table__sellar--heading'}
               配送料の負担
-            %th
+            %th{ class: 'right-table__sellar--value'}
               送料込み(出品者負担)
           %tr
-            %th
+            %th{ class: 'right-table__sellar--heading'}
               配送の方法
-            %th
+            %th{ class: 'right-table__sellar--value'}
               らくらくメルカリ
           %tr
-            %th
+            %th{ class: 'right-table__sellar--heading'}
               配送元地域
-            %th
+            %th{ class: 'right-table__sellar--value'}
               滋賀県
               -# ↑地域の出品一覧へのリンクが必要。
           %tr
-            %th
+            %th{ class: 'right-table__sellar--heading'}
               発送日の目安
-            %th
+            %th{ class: 'right-table__sellar--value'}
               1〜2日で発送
 
     .buy-section
@@ -79,6 +96,7 @@
           送料込み
       .proseed-to-order
         購入画面に進む
+      -# スマホ版のみ表示されるっぽい
       .note_apponly
         この商品はゆうゆうメルカリ便を利用しているため、アプリからのみ購入できます。
 
@@ -113,15 +131,16 @@
       ポケモンカード ピカチュウ&ゼクロムGX SR
   .posttosns-area
     facebook twitter line pinterest
-  
+
   .otheritems_of_seller
-    -# とりあえずはトップページのをパクる。
-    = render 'shared/contents-top'
-    = render 'shared/contents-header'
-  
+
+  -# とりあえずはトップページのをパクる。
+  = render 'shared/contents-top'
+  = render 'shared/contents-header'
+
   .otheritrms_of_brand
-    -# とりあえずはトップページのをパクる。
-    = render 'shared/contents-top'
-    = render 'shared/contents-header'
+  -# とりあえずはトップページのをパクる。
+  = render 'shared/contents-top'
+  = render 'shared/contents-header'
 
 = render 'shared/footer'

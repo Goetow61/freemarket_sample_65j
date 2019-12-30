@@ -1,0 +1,180 @@
+body {
+  background-color: rgb(245,245,245);
+}
+.top-show {
+  width: 100%;
+  height: 100%;
+
+  // .main-content {
+  //   background-color:yellow;
+  //   height: 300px;
+  //   padding: 24px 40px 40px;
+  //   margin: 40px auto 0;
+  .detail-area {
+    background-color: #ffffff;
+    padding: 24px 40px 40px;
+    margin: 40px auto 0;
+    width: 620px;
+    .title {
+      // background-color: blue;
+      &__itemname {
+        font-weight: bold;
+        margin-bottom: 18px;
+        text-align: center;
+        font-size: 24px;
+        width: 100%;
+        height: 33px;
+        line-height: 33px;
+        // background-color: rgb(140,50,70);
+      }
+      &__overview {
+        display: none;
+        width: 100%;
+        background-color: rgb(80,140,200);
+      }
+    }
+    .detail {
+      display: flex;      
+      .left-preview {
+        width: 300px;
+        background-color: #fafafa;
+        &__bigone {
+          width: 300px;
+          height: 300px;
+          // background-image: url(https://www.jalan.net/news/img/2017/08/20170802__0002916297_1-670x443.jpg);
+        }
+        &__smallten {
+          width: 100%;
+          height: 120px;
+          display: flex;
+          flex-wrap: wrap;
+          &__smallpreview {
+            width: 60px;
+            height: 60px;  
+          }
+        }
+      }
+      .right-table {
+        // border-collapse: collapse;
+        // border: 1px solid #f5f5f5;
+        box-sizing: border-box;
+        margin-left: 18px;
+        width: calc( 100% - 300px );
+        height: 420px;
+        font-size: 14px;
+        // padding: 8px;
+        &__sellar {
+          border-collapse: collapse;
+          border: 1px solid #f5f5f5;
+          // padding: 8px;
+          height: 100%;
+          &--heading {
+            width: 117px;
+            padding: 8px;
+            height: auto;
+            background-color: #fafafa;
+            border: 1px solid #f5f5f5;
+          }
+          &--value {
+            width: 182px;
+            padding: 8px;
+            border: 1px solid #f5f5f5;
+            .fas {
+              margin-right: 18px;
+            }
+            span {
+              color: #000;
+            }
+            .fa-smile {
+              color: pink;
+            }
+            .fa-meh {
+              color: orange;
+            }
+            .fa-frown {
+              color: blue;
+            }
+          }
+        }
+      }
+    }
+    .buy-section {
+      text-align: center;
+      // width: 100%;
+      .product-price {
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        margin-bottom: 18px;
+        .product-price__price {
+          margin-right: 16px;
+          font-size: 50px;
+          font-weight: 600;
+        }
+        .product-price__taxin {
+          font-size: 10px;
+          margin-right: 4px;
+        }
+        p {
+          font-size: 16px;
+        }
+      }
+      .proseed-to-order {
+        height: 60px;
+        line-height: 60px;
+        font-size: 24px;
+        background: #ea352d;
+        color: #fff;
+
+      }
+      // スマホ版でのみ表示されるっぽい
+      .note_apponly {
+        display: none;
+
+      }
+    }
+
+    //  以降のコメントをmysqlにstringで放り込むが、ちゃんと改行コード入れられるのか？
+    .detail-comment {
+    }
+    .evaluation-section {
+      .evaluation-section__like {
+      }
+      .evaluation-section__report-warning {
+      }
+      .evaluation-section__security-report {
+
+      }
+    }
+  }
+
+  // コメント投稿はログインしていない時は表示されない
+  .post-section {
+    .post-section__warning {
+
+    }
+    .post-section__textbox {
+
+    }
+    .post-seciton__sendmessage-btn {
+
+    }
+  }
+  .change-item-area {
+
+  }
+  .change-item-area__beforepagelink {
+
+  }
+  .change-item-area__afterpagelink {
+
+  }
+}
+
+.posttosns-area {
+
+}
+
+.otheritems_of_seller {
+
+}
