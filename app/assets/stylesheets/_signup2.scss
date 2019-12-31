@@ -64,4 +64,113 @@ label {
 
 .l-single-content__email{
   margin: 24px 0 0;
+  #user_email {
+    width: 100%;
+    margin: 8px 0 0;
+    height: 48px;
+    padding: 10px 16px 8px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    line-height: 1.5;
+    font-size: 16px;
+    background: #fff;
+  }
+}
+
+
+.l-single-content__password{
+  margin: 24px 0 0;
+}
+
+#user_password{
+  width: 100%;
+  margin: 8px 0 0;
+  height: 48px;
+  padding: 10px 16px 8px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  line-height: 1.5;
+  font-size: 16px;
+  background: #fff;
+}
+
+
+.l-single-sub-head {
+  margin: 24px 0 0;
+  &__left-text {
+    font-size: 16px;
+    font-weight: bold;
+  }
+  &__text {
+    margin: 8px 0 0;
+    padding: 0;
+    line-height: 1.5;
+    font-size: 13px;
+  }
+}
+
+.signup-main__form__name {
+  line-height: 17px;
+  display: flex;
+  margin-top: 24px;
+  p {
+    font-weight: 600;
+    font-size: 13px;
+  }
+  
+  &__inputbox {
+    display: flex;
+    &__last-name-input {
+      margin: 8px 8px 0px 0px;
+      width: 155px;
+      height: 48px;
+      border-radius: 4px;
+      font-size: 16px;
+      padding: 10px 16px 8px;
+      border: 1px solid #CCC;
+    }
+    &__first-name-input {
+      margin: 8px 8px 0px 0px;
+      width: 155px;
+      height: 48px;
+      border-radius: 4px;
+      font-size: 16px;
+      padding: 10px 16px 8px;
+      border: 1px solid #CCC;
+    }
+  }
+}
+
+
+
+.signup-main__form__name-kana {
+  line-height: 17px;
+  display: flex;
+  margin-top: 24px;
+  p {
+    font-weight: 600;
+    font-size: 13px;
+  }
+  
+  &__inputbox {
+    display: flex;
+    &__last-name-input {
+      margin: 8px 8px 0px 0px;
+      width: 155px;
+      height: 48px;
+      border-radius: 4px;
+      font-size: 16px;
+      padding: 10px 16px 8px;
+      border: 1px solid #CCC;
+    }
+    &__first-name-input {
+      margin: 8px 8px 0px 0px;
+      width: 155px;
+      height: 48px;
+      border-radius: 4px;
+      font-size: 16px;
+      padding: 10px 16px 8px;
+      border: 1px solid #CCC;
+    }
+  }
 }

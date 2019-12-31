@@ -14,28 +14,53 @@
               = f.text_field :nickname, autofocus: true, autocomplete: "nickname", placeholder: "例)メルカリ太郎"
             .l-single-content__email
               = f.label :メールアドレス
+              %span.l-single-content__require 必須
               %br/
               = f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "PC・携帯どちらでも可"
+
             
             - if @sns_id.present?
               = hidden_field_tag :sns_auth, true
             - else
-              .field
+              .l-single-content__password
                 = f.label :パスワード
+                %span.l-single-content__require 必須
                 
                 %br/
                 = f.password_field :password, autocomplete: "new-password", placeholder: "7文字以上の半角英数字"
-            
-            .field
-              = f.label :"お名前(全角)"
+
+              .l-single-content__password
+                = f.label :パスワード（確認）
+                %span.l-single-content__require 必須
+                
+                %br/
+                = f.password_field :password, autocomplete: "new-password", placeholder: "7文字以上の半角英数字"
+
+            .l-single-sub-head
+              %h3.l-single-sub-head__left-text 本人確認
+              %p.l-single-sub-head__text 
+                安心・安全にご利用いただくために、お客さまの本人情報の登録にご協力ください。他のお客さまに公開されることはありません。            
+            .signup-main__form__name
+              %p 
+                お名前（全角）
+              %span.l-single-content__require 必須 
               %br/
-              = f.text_field :last_name, placeholder: "例)山田"
-              = f.text_field :first_name, placeholder: "例)彩"
-            .field
-              = f.label :"お名前カナ(全角)"
+            .signup-main__form__name__inputbox
+              = f.text_field :last_name, placeholder: "例)山田", class: "signup-main__form__name__inputbox__last-name-input"
+              = f.text_field :first_name, placeholder: "例)彩", class: "signup-main__form__name__inputbox__first-name-input"
+
+
+
+            .signup-main__form__name-kana
+              %p 
+                お名前カナ（全角）
+              %span.l-single-content__require 必須 
               %br/
-              = f.text_field :last_name_kana, placeholder: "例)ヤマダ"
-              = f.text_field :first_name_kana, placeholder: "例)アヤ"
+            .signup-main__form__name-kana__inputbox
+              = f.text_field :last_name_kana, placeholder: "例)ヤマダ", class: "signup-main__form__name__inputbox__last-name-input"
+              = f.text_field :first_name_kana, placeholder: "例)アヤ", class: "signup-main__form__name__inputbox__first-name-input"
+
+
             .field
               = f.label :生年月日
               = raw sprintf(                                  |
