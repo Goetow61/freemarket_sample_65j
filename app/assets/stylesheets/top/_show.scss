@@ -130,7 +130,6 @@ body {
       // スマホ版でのみ表示されるっぽい
       .note_apponly {
         display: none;
-
       }
     }
 
@@ -138,28 +137,143 @@ body {
     .detail-comment {
     }
     .evaluation-section {
-      .evaluation-section__like {
-      }
-      .evaluation-section__report-warning {
+      font-size: 14px;
+      margin-top: 16px;
+      bottom: 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      .left-box {
+        display: flex;
+        // align-items: center;
+        .evaluation-section__like {
+          padding: 8px 16px;
+          display: flex;
+          // align-items: flex-end;
+          align-items: center;
+          //いいねがあれば、%i.fas.fa-heart(塗りつぶし)に切り替えないといけない
+          background-color: #f5f5f5;
+          border-radius: 15px;
+          span,&__like-count {
+            margin-left: 8px;
+           }
+        }
+        .evaluation-section__report-warning {          
+          padding: 8px 16px;
+          background-color: #f5f5f5;
+          border-radius: 15px;
+          margin-left: 16px;
+          span {
+            margin-left: 8px;
+          }
+        }
       }
       .evaluation-section__security-report {
-
+        right: 0;
+        color: #0099eb;
+        span {
+          margin-left: 8px;
+          // color: #0099eb;
+        }
       }
     }
   }
 
   // コメント投稿はログインしていない時は表示されない
-  .post-section {
-    .post-section__warning {
+  .chat-area {
+    background-color: #ffffff;
+    padding: 24px 40px 40px;
+    margin: 40px auto 0;
+    width: 620px;
+    margin-top: 10px;
+    .comments-area {
+      .comment-area {
+        display: flex;
+        .left-box {
+          display: frex;
+          justify-content: center;
+          width: 50.02px;
+          .usericon {
+            border-radius: 50%;
+            z-index: 4;
+            position: relative;
+          }
+          .sellar-flag {
+            text-align: center;
+            font-size: 12px;
+            z-index: 4;
+          }
+        }
+        .right-box {
+          display: inline-block;
+          .name-section {
 
+          }
+          .comment-section {
+            position: relative;
+            background-color: #eef0f4;
+            padding: 16px;
+            border-radius: 15px;
+            display: flex;
+            justify-content: space-between;
+            z-index: auto;
+            .comment {
+              font-size: 14px;
+            }
+            .icon-section {
+              margin-top: 8px;
+            }
+          }
+          .comment-section::before {
+            content: '';
+            position: absolute;
+            display: block;
+            width: 0;
+            height: 0;
+            border-radius: 50%;
+            transform: rotate(-135deg);
+            top: 10px;
+            left: -20px;
+            z-index: -2;
+            // border-left: 20px solid transparent;
+            // border-top: 20px solid #eef0f4;
+            // border-right: 20px solid #eef0f4;
+            // border-bottom: 20px solid transparent;
+            border: 20px solid #2c4a85;
+          }
+          .comment-section::after {
+            content: '';
+            position: absolute;
+            display: block;
+            width: 0;
+            height: 0;
+            border-radius: 50%;
+            transform: rotate(-135deg);
+            top: 0px;
+            left: -80px;
+            z-index: -1;
+            // border-left: 40px solid transparent;
+            // border-top: 40px solid green;
+            // border-right: 40px solid green;
+            // border-bottom: 40px solid transparent;
+            border: 40px solid #923636;
+          }
+        }
+      }
     }
-    .post-section__textbox {
+    .post-section {
+      .post-section__warning {
 
-    }
-    .post-seciton__sendmessage-btn {
+      }
+      .post-section__textbox {
 
+      }
+      .post-seciton__sendmessage-btn {
+
+      }
     }
   }
+
   .change-item-area {
 
   }

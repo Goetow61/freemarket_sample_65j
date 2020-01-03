@@ -111,19 +111,70 @@
       %br
       サイズアウトが早かったためどなたか使用していただけるためにお譲りします。
     .evaluation-section
-      .evaluation-section__like
-        いいね1 0
-      .evaluation-section__report-warning
-        不適切な商品の報告
+      .left-box
+        .evaluation-section__like
+          -# %i.fas.fa-heart
+          %i.far.fa-heart
+          %span
+            いいね!
+          .evaluation-section__like__like-count
+            10
+        .evaluation-section__report-warning
+          %i.far.fa-flag
+          %span
+            不適切な商品の報告
       .evaluation-section__security-report
-        あんしん・あんぜんへの取り組み
+        %i.fas.fa-lock
+        %span
+          あんしん・あんぜんへの取り組み
 
   -# コメント投稿はログインしていない時は表示されない
-  .post-section
-    .post-section__warning
-      相手のことを考え丁寧なコメントを心がけましょう。不快な言葉遣いなどは利用制限や退会処分となることがあります。
-    .post-section__textbox
-    .post-seciton__sendmessage-btn
+  .chat-area
+    .comments-area
+      .comment-area
+        .left-box
+          = image_tag "sample_cat7.jpg", size: "40x40", alt: "sample7", class:'usericon'
+          .sellar-flag
+        .right-box
+          .name-section
+            まいまい
+          .comment-section
+            .comment
+              SIMロック解除はされていますか？また付属品はありますか？宜しくお願い致します。
+            .icon-section
+              %i.far.fa-clock
+                %span 2日前
+              %i.far.fa-flag
+    .comments-area
+      .comment-area
+        .left-box
+          = image_tag "sample_cat5.jpg", size: "40x40", alt: "sample5", class:'usericon'
+          .sellar-flag
+            出品者
+        .right-box
+          .name-section
+            Hiro
+          .comment-section
+            .comment
+              お問い合わせありがとうございます。
+              %br
+              %br
+              ソフトバンクショップに、再度確認したところ、SIMロックは解除されていませんでした。申し訳ございません。ソフトバンク以外のキャリアを利用される場合は、ソフトバンク店舗で解除手続き(手数料3,300円)をお願い申し上げます。
+              %br
+              また、付属品はございません。
+              %br
+              %br
+              何卒ご検討のほど宜しくお願い申し上げます。
+            .icon-section
+              %i.far.fa-clock
+                %span 2日前
+              %i.far.fa-flag
+    .post-section
+      = form_with url: '#' do |f|
+        .post-section__warning
+          相手のことを考え丁寧なコメントを心がけましょう。不快な言葉遣いなどは利用制限や退会処分となることがあります。
+        = f.text_field :text, class:"post-section__textbox"
+        = f.submit "コメントする", class:'post-sectiton__sendmessage-btn'
   .change-item-area
     .change-item-area__beforepagelink
       あんステ　特典
