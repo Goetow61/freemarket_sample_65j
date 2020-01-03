@@ -1,0 +1,91 @@
+= render  'shares/regacc_header'
+
+.main
+  .main__content
+    .main__content__header
+      会員情報入力
+    .main__content__form
+      .main__content__form__to
+        .main__content__form__to__center
+          .main__content__form__to__center__nickname
+            .main__content__form__to__center__nickname__header
+              ニックネーム
+            .main__content__form__to__center__nickname__require
+              必須
+            %br/
+            .main__content__form__to__center__nickname__form
+              例）メルカリ太郎
+          .main__content__form__to__center__mail
+            .main__content__form__to__center__mail__header
+              メールアドレス
+            .main__content__form__to__center__mail__require
+              必須
+            .main__content__form__to__center__mail__form
+              PC・携帯どちらでも可
+          .main__content__form__to__center__password
+            .main__content__form__to__center__password__header  
+              パスワード 
+            .main__content__form__to__center__password__require
+              必須
+            .main__content__form__to__center__password__form
+              ７文字以上の英数字
+            .main__content__form__to__center__password__note
+              ※ 英字と数字の両方を含めて設定してください
+            .main__content__form__to__center__password__indicate
+              パスワードを表示する
+          .main__content__form__to__center__identify
+            .main__content__form__to__center__identify__title
+              本人確認
+            .main__content__form__to__center__identify__text
+              安心・安全にご利用いただくために、お客さまの本人情報の登録にご協力ください。他のお客さまに公開されることはありません。
+            .main__content__form__to__center__identify__header
+              お名前(全角)
+            .main__content__form__to__center__identify__require
+              必須
+            .main__content__form__to__center__identify__surname
+              例）山田
+            .main__content__form__to__center__identify__name
+              例）彩
+            .main__content__form__to__center__identify__header
+              お名前カナ(全角)
+            .main__content__form__to__center__identify__require
+              必須
+            .main__content__form__to__center__identify__surname
+              例）ヤマダ
+            .main__content__form__to__center__identify__name
+              例）アヤ
+            .main__content__form__to__center__identify__header
+              生年月日
+            .main__content__form__to__center__identify__require
+              必須
+            .main__content__form__to__center__identify__birthday-year
+              年
+            .main__content__form__to__center__identify__birthday-month
+              月
+            .main__content__form__to__center__identify__birthday-date
+              日
+            .main__content__form__to__center__identify__note
+              ※ 本人情報は正しく入力してください。会員登録後、修正するにはお時間を頂く場合があります。
+          .main__content__form__to__center__footer
+            .main__content__form__to__center__footer__note
+              「次へ進む」のボタンを押すことにより、
+              = link_to "#" do
+                利用規約
+              に同意したものとみなします
+            .main__content__form__to__center__footer__btn
+              = link_to "#" do
+                次へ進む
+            .main__content__form__to__center__footer__info
+              = link_to "#" do
+                本人情報の登録について〉
+            .main__content__form__to__center__footer__message
+              This site isprotected by reCAPTCHA and the Google
+              = link_to "#" do
+                Privacy Policy 
+              and 
+              = link_to "#" do
+                Terms of Service  
+              apply.
+
+
+= render  'shares/regacc_footer'
