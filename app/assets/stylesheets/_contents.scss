@@ -33,6 +33,10 @@
         color: #0095EE;
       }
     }
+    .category-genre{
+      // display: grid;
+      // grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    }
     &__items{
       height: 550px;
       width: 1020px;
@@ -57,6 +61,7 @@
           height: 182px;
           width: 188px;
           box-sizing: border-box;
+
           &__money{
             font-size: 17px;
             color:#FFFFFF;
@@ -69,13 +74,13 @@
             top: 140px;
             }
          }
-    &__text{
-      height: 70px;
-      width: 188px;
-      position: absolute;
-      top: 182px;
-      background-color: #FFFFFF;
-      text-align: center;
+        &__text{
+          height: 70px;
+          width: 188px;
+          position: absolute;
+          top: 182px;
+          background-color: #FFFFFF;
+          text-align: center;
     }
    }
   }

@@ -1,16 +1,18 @@
 .contents-main__new__category__items
-  .contents-main__new__category__items__card
-    .contents-main__new__category__items__card__img
-      - @images.each do |image|
-        = image_tag image.image,class:"contents-main__new__category__items__card__img"
-      -# = f.label :image, class: 'contents-main__new__category__items__card__img' do
-      -#   = f.file_field :image, class: 'hidden'
-      -#   =link_to '#'do
-      -# = image_tag "cap.jpg", size: "188x182", alt: "sample1"
-  -#     .contents-main__new__category__items__card__img__money
-  -#       ￥5,000
-  -#   .contents-main__new__category__items__card__text
-  -#     プラダ 帽子
+  = link_to root_path do
+    .contents-main__new__category__items__card
+      .contents-main__new__category__items__card__img
+        - @images.each do |image|
+          = image_tag image.image,class:"contents-main__new__category__items__card__img"
+          .contents-main__new__category__items__card__img__money
+            - @items.each do |item|
+              =item.price
+              -# = item_tag  class:".contents-main__new__category__items__card__img__money"
+            -# ￥5,000
+      .contents-main__new__category__items__card__text
+        - @items.each do |item|
+          =item.detail
+        -# プラダ 帽子
   -# .contents-main__new__category__items__card
   -#   .contents-main__new__category__items__card__img
   -#     = image_tag "heels.jpg", size: "188x182", alt: "sample1"

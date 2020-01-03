@@ -1,7 +1,12 @@
 class TopController < ApplicationController
   def index
-    @items= Item.all
-    @images = Image.all
+    @items= Item.all.last(10)
+    @images = Image.all.last(10)
+  end
+
+  def show
+    @item = Item.find(params[:id])
+    @image = Tweet.find(params[:id])
   end
 
 private
