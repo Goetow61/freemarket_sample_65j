@@ -9,43 +9,38 @@
   background: #fff;
 }
 
-
 .l-single-head__registration {
   font-size: 22px;
   font-weight: bold;
   padding: 32px;
   line-height: 33px;
   text-align: center;
-}
-
-.l-single-head__registration__form{
-  padding: 24px 16px 40px;
-  border-top: 1px solid rgb(245, 245, 245);
+  &__form{
+    padding: 24px 16px 40px;
+    border-top: 1px solid rgb(245, 245, 245);
+  }
 }
 
 .l-single-content{
   max-width: 343px;
   margin: 0px auto; 
-}
-
-.l-single-content__nickname{
-  margin: 0;
+  &__nickname{
+    margin: 0;
+  }
+  &__require{
+    background: #ea352d;
+    margin: 0 0 0 8px;
+    padding: 2px 4px;
+    border-radius: 2px;
+    color: #fff;
+    font-size: 12px;
+    right: 12px;
+  }
 }
 
 label {
   font-weight: 600;
   font-size: 13px;
-}
-
-
-.l-single-content__require {
-  background: #ea352d;
-  margin: 0 0 0 8px;
-  padding: 2px 4px;
-  border-radius: 2px;
-  color: #fff;
-  font-size: 12px;
-  right: 12px;
 }
 
 

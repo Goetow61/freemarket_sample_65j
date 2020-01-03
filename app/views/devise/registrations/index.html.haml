@@ -1,9 +1,7 @@
--# %h1 トップページ
--# - if user_signed_in?
--#   %h2 ログインしています
--#   = link_to "ログアウト", destroy_user_session_path, method: :delete
--# - else
--#   %h2 ログインしていません
+- if user_signed_in?
+  %h2 ログインしています
+  = link_to "ログアウト", destroy_user_session_path, method: :delete
+- else
 
 
 .signup__container
