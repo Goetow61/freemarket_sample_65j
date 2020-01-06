@@ -1,3 +1,4 @@
+$(document).on('turbolinks:load', function() {
 $(function(){
   // カテゴリーセレクトボックスのオプションを作成
   function appendOption(category){
@@ -94,4 +95,5 @@ $(function(){
       $('#brand_wrapper').remove();
     }
   });
+});
 });
