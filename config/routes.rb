@@ -10,7 +10,7 @@ Rails.application.routes.draw do
     post 'card',      to: 'users/registrations#create_card'
   end
   root to: 'top#index'
-  resources :items, only: [:index, :show, :new, :edit, :destroy, :create] do
+  resources :items do
     #Ajaxで動くアクションのルートを作成
     collection do
       get 'get_category_children', defaults: { format: 'json' }
