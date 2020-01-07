@@ -1,5 +1,6 @@
 class ItemsController < ApplicationController
   before_action :authenticate_user!
+
   before_action :set_item, except: [:index, :new, :create]
 
   def new
@@ -34,6 +35,11 @@ class ItemsController < ApplicationController
   end
 
 
+  def show
+  end
+ 
+
+
   def edit
     @category_parent_array = Category.where(ancestry: nil).pluck(:name)
     @category_parent_array.unshift("---")
@@ -58,6 +64,11 @@ class ItemsController < ApplicationController
   def set_item
     @item = Item.find(params[:id])
   end
+
+  def set_item
+    @item = item.find(params[:id])
+  end
 end
+
 
 

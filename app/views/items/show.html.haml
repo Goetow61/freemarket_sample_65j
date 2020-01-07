@@ -1,0 +1,18 @@
+= @item.item_name
+
+= image_tag @item.images.first.src.url, size: "188x182", alt: "sample1"
+
+= @item.user.nickname
+= @item.category
+= @item.status
+= @item.postmethod
+
+= @item.streetadress
+
+
+= @item.price
+= @item.postmethod
+= button_to "購入する", purchase_index_path(@item), {method: :get, params: @item} 
+= @item.detail
+
+
