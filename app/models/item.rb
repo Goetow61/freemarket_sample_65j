@@ -1,5 +1,5 @@
 class Item < ApplicationRecord
-  has_many :images
+  has_many :images, dependent: :destroy
   belongs_to :user, optional: true
   accepts_nested_attributes_for :images, allow_destroy: true
   validates :item_name, :detail, :status, :postage, :streetadress, :postage, :days, :price, presence: true
