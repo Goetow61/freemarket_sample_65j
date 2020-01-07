@@ -1,6 +1,6 @@
 class ItemsController < ApplicationController
   before_action :authenticate_user!
-  
+  before_action :set_item, only: [:show]
 
   def new
     @item = Item.new
@@ -34,8 +34,6 @@ class ItemsController < ApplicationController
   end
 
   def show
-    @item = Item.find(params[:id])
-
   end
   
 
