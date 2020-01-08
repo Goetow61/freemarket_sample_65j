@@ -114,21 +114,19 @@
     &__message{
       width: 560px;
       padding-left: 20px;
+    &__check{
+      display: block;
+      height: 56px;
+      margin: 0 auto;
+      background: #eee;
+      color: #333;
+      line-height: 56px;
+      text-align: center;
+      width: 650px;
+    }
     }
   }
 }
-
-.a-right-content__block__object__link-box__check{
-  display: block;
-  height: 56px;
-  margin: 0 auto;
-  background: #eee;
-  color: #333;
-  line-height: 56px;
-  text-align: center;
-  width: 650px;
-}
-
 
 .tab-head{
   padding: 0 4%;
