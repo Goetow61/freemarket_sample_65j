@@ -7,12 +7,13 @@
       %span.listing-default--require 必須
       #text 最大10枚までアップロードできますアップロードできます
       = form_for(@item, url: items_path) do |f|
-        = f.label '出品画像'
-        
-        -# = f.fields_for @item.images do |ff|
-        -#   = ff.file_field :image , accept: ".jpg, .jpeg, .png", multiple: true
-        -# #text 最大10枚までアップロードできますアップロードできます
-        = f.file_field :image
+        %label 
+          .a
+            ドラッグアンドドロップ
+            %br/
+            またはクリックしてファイルをアップロード
+          = f.file_field :image,class:"file_field"
+          
         #previews
         - if @item.persisted?
           - @item.images.each_with_index do |image, i|
@@ -23,7 +24,7 @@
             .js-file_group{"data-index" => "#{image.index}"}
               = image.file_field :src, class: 'js-file'
               %br/
-              %span.js-remove 削除
+              %span.js-remove 
     .content-items
       = form_for(@item, url: items_path) do |f|
         = f.label '商品名'

@@ -1,3 +1,4 @@
+$(document).on('turbolinks:load', function() { 
 $(function() {
   $('.slider-list').slick({
     slidesToShow: 1,
@@ -7,4 +8,5 @@ $(function() {
     dots: true,
     dotsClass: 'slide-dots'
   });
+});
 });
