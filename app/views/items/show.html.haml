@@ -3,7 +3,7 @@
   .main-content
   .detail-area
     .title
-      %h1{ class:'title__itemname' }
+      %h1.title__itemname
         = @item.item_name
     .detail
       .left-preview
@@ -12,11 +12,11 @@
         .left-preview__smallten
           
       .right-table
-        %table{ class: 'right-table__sellar' }
+        %table.right-table__sellar
           %tr
-            %th{ class: 'right-table__sellar--heading'}
+            %th.right-table__sellar--heading
               出品者
-            %th{ class: 'right-table__sellar--value'}
+            %th.right-table__sellar--value
               = @item.user.nickname
               %br
               %i.fas.fa-smile
@@ -29,44 +29,44 @@
                 %span
                   0
           %tr
-            %th{ class: 'right-table__sellar--heading'}
+            %th.right-table__sellar--heading
               カテゴリー
-            %th{ class: 'right-table__sellar--value'}
+            %th.right-table__sellar--value
               = @item.category
           %tr
-            %th{ class: 'right-table__sellar--heading'}
+            %th.right-table__sellar--heading
               ブランド
-            %th{ class: 'right-table__sellar--value'}
+            %th.right-table__sellar--value
               UNIQLO
           %tr
-            %th{ class: 'right-table__sellar--heading'}
+            %th.right-table__sellar--heading
               商品のサイズ
-            %th{ class: 'right-table__sellar--value'}
+            %th.right-table__sellar--value
               L
           %tr
-            %th{ class: 'right-table__sellar--heading'}
+            %th.right-table__sellar--heading
               商品の状態
-            %th{ class: 'right-table__sellar--value'}
+            %th.right-table__sellar--value
               = @item.status
           %tr
-            %th{ class: 'right-table__sellar--heading'}
+            %th.right-table__sellar--heading
               配送料の負担
-            %th{ class: 'right-table__sellar--value'}
+            %th.right-table__sellar--value
               送料込み
           %tr
-            %th{ class: 'right-table__sellar--heading'}
+            %th.right-table__sellar--heading
               配送の方法
-            %th{ class: 'right-table__sellar--value'}
+            %th.right-table__sellar--value
               = @item.postmethod
           %tr
-            %th{ class: 'right-table__sellar--heading'}
+            %th.right-table__sellar--heading
               配送元地域
-            %th{ class: 'right-table__sellar--value'}
+            %th.right-table__sellar--value
               = @item.streetadress
           %tr
-            %th{ class: 'right-table__sellar--heading'}
+            %th.right-table__sellar--heading
               発送日の目安
-            %th{ class: 'right-table__sellar--value'}
+            %th.right-table__sellar--value
               = @item.days
 
     .buy-section
