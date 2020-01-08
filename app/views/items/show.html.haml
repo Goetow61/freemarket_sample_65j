@@ -1,18 +1,109 @@
-= @item.item_name
-
-= image_tag @item.images.first.src.url, size: "188x182", alt: "sample1"
-
-= @item.user.nickname
-= @item.category
-= @item.status
-= @item.postmethod
-
-= @item.streetadress
-
-
-= @item.price
-= @item.postmethod
-= button_to "購入する", purchase_index_path(@item), {method: :get, params: @item} 
-= @item.detail
-
+.wrapper
+  .header
+    = render "shared/header"
+  .item-page
+    .item-page-con
+      .item-details
+        .details-box
+          .item-name ロンシャン 折りたたみバッグ コンパクト トートバッグ ハンドバッグ ナイロン
+          .details
+            .item-imgs
+              = image_tag @item.images.first.src.url, size: "300x300", alt: "sample1"
+              .imgs-subs
+                .imgs-sub-box
+            %table.item-detail-table{:border => 1}
+              %tr
+                %th 出品者
+                %td
+                  = @item.user.nickname
+                  .buyer-icon
+                    .buyer-icon-box
+                      %i.fas.fa-laugh
+                      = link_to "#" do
+                        %span 61
+                    .buyer-icon-box
+                      %i.fas.fa-meh
+                      = link_to "#" do
+                        %span 2
+                    .buyer-icon-box
+                      %i.fas.fa-frown
+                      = link_to "#" do
+                        %span １
+              %tr
+                %th カテゴリー
+                %td
+                  = @item.category
+                  
+              %tr
+                %th ブランド
+                %td
+                  =link_to " Longchamp", "#", class: "brand"
+              %tr
+                %th 商品のサイズ
+                %td L
+              %tr
+                %th 商品の状態
+                %td 
+                  = @item.status
+              %tr
+                %th 送料の負担
+                %td 送料込み(出品者負担)
+              %tr
+                %th 配送の方法
+                %td 
+                  = @item.postmethod
+              %tr
+                %th 配送元地域
+                %td
+                  = @item.streetadress
+              %tr
+                %th 発想の目安
+                %td 
+                  = @item.days
+          .price-box
+            .item-price 
+              ¥
+              = @item.price
+            .price-tax （税込）
+            .item-shipping-fee 送料込み
+          = link_to "購入画面に進む", '#', class: "item-buy-btn"
+          .shipping-message この商品はゆうゆうメルカリ便を利用しているため、アプリからのみ購入できます。
+          .item-discription 
+            = @item.detail
+        .btn-bar
+          .btn-box
+            %button{class: "btn", onclick: "location.href='#'", type: "button"}
+              %i.far.fa-heart.fa-lg{style:"color:lightgrey"}
+              %span.in-button いいね！ 18
+            %button{class: "btn", onclick: "location.href='#'", type: "button"}
+              %i.far.fa-flag.fa-lg
+              %span.in-button 不適切な商品の報告
+          %button{class: "policy-btn", onclick: "location.href='#'", type: "button"}
+            %i.fas.fa-lock.fa-lg
+            %span.in-button あんしん・あんぜんへの取り組み
+  .comment-page
+    .comment-page-con
+      .comment-box
+        .comment-caution 相手のことを考え丁寧なコメントを心がけましょう。不快な言葉遣いなどは利用制限や退会処分となることがあります。
+        %textarea.comment
+        = link_to "コメントする", "#", class: "comment-btn"
+      .nav-item
+        = link_to "＜前へ", "#", class: "prev"
+        = link_to "次へ＞", "#", class: "next"
+      .social-media-box
+        .icon-box
+          .icon-sns
+            = link_to "https://www.facebook.com/login.php?skip_api_login=" do
+              .facebook
+                %i.fab.fa-facebook-square
+          .icon-sns
+            = link_to "https://twitter.com/intent/tweet?text=" do
+              .twitter
+                %i.fab.fa-twitter
+          .icon-sns
+            = link_to "https://www.pinterest.jp/" do
+              .pinterest
+                %i.fab.fa-pinterest.fa-xs
+  .footer
+    = render "shared/footer"
 
