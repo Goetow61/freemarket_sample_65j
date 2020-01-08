@@ -1,0 +1,20 @@
+.exhibit-btn{
+  height: 160px;
+  width: 160px;
+  border-radius: 50%;
+  position: fixed;
+  background-color: crimson;
+  font-size: 22px;
+  text-align: center;
+  color: white;
+  padding-top: 32px;
+  box-sizing: border-box;
+  bottom: 30px;
+  right: 30px;
+  display: block;
+  align-items: center;
+  z-index: 2;
+  &__icon{
+    font-size: 60px;
+  }
+}
