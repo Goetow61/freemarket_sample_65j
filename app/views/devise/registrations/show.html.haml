@@ -1,0 +1,174 @@
+-# mypageのビューを作成
+= render 'shared/header'
+.breadcrumb__box
+  .breadcrumbs-list
+    %a メルカリ › マイページ
+
+.mypage-main-content
+  .left-content
+    .left-content__bar
+      %ul
+        %li
+          %a{href: "/show"} マイページ
+          %br/
+          %i.fa.fa-chevron-right
+        %li
+          %a お知らせ
+          %i.fa.fa-chevron-right
+        %li
+          %a やることリスト
+          %i.fa.fa-chevron-right
+        %li
+          %a いいね！一覧
+          %i.fa.fa-chevron-right
+        %li
+          %a{href: "/products/new"} 出品する
+          %i.fa.fa-chevron-right
+        %li
+          %a{href: "#"} 出品した商品-出品中
+          %i.fa.fa-chevron-right
+        %li
+          %a{href: "#"} 出品した商品-取引中
+          %i.fa.fa-chevron-right
+        %li
+          %a{href: "#"} 出品した商品-売却済み
+          %i.fa.fa-chevron-right
+        %li
+          %a{href: "#"} 購入した商品-取引中
+          %i.fa.fa-chevron-right
+        %li
+          %a{href: "#"} 購入した商品-過去の取引
+          %i.fa.fa-chevron-right
+        %li
+          %a ニュース一覧
+          %i.fa.fa-chevron-right
+        %li
+          %a{href: "#"} 評価一覧
+          %i.fa.fa-chevron-right
+        %li
+          %a ガイド
+          %i.fa.fa-chevron-right
+        %li
+          %a お問い合わせ
+          %i.fa.fa-chevron-right
+    .left-content__bar
+      %h4 売り上げ・ポイント
+      %ul.marginT-8px
+        %li
+          %a 売上・振込申請
+          %i.fa.fa-chevron-right
+        %li
+          %a ポイント
+          %i.fa.fa-chevron-right
+    .left-content__bar
+      %h4 設定
+      %ul.marginT-8px
+        %li
+          %a{href: "#"} プロフィール
+          %i.fa.fa-chevron-right
+        %li
+          %a{href: "#"} 住所変更
+          %i.fa.fa-chevron-right
+        %li
+          %a{href: "#"} 支払い方法
+          %i.fa.fa-chevron-right
+        %li
+          %a メール/パスワード
+          %i.fa.fa-chevron-right
+        %li
+          %a{href: "#"} 本人情報
+          %i.fa.fa-chevron-right
+        %li
+          %a 電話番号の確認
+          %i.fa.fa-chevron-right
+        %li
+          %a{href: "#"} ログアウト
+          %i.fa.fa-chevron-right
+
+
+  .a-right-content
+    .a-right-content__block#back-img.middle-center
+      .a-right-content__block__user
+        = image_tag 'https://static.mercdn.net/thumb/members/905716414.jpg?1558540615', size: '60x60', alt: 'user-icon', class:"user-icon"
+        .a-right-content__block__user-name メルカリさん
+        .a-right-content__block__user-about
+          %p.a-right-content__block__review 評価 118 出品数 59
+
+
+
+    .a-right-content__block
+      %ul.a-right-content__block__tabs
+        .mypage-center お知らせ
+        .mypage-center やることリスト
+      %ul.a-right-content__block__object
+        %li
+          .a-right-content__block__object__link-box
+            .a-right-content__block__object__link-box__figure
+              = image_tag 'https://static.mercdn.net/images/mercari_profile.png', size: '60x60'
+            .a-right-content__block__object__link-box__message
+              .a-right-content__block__object__link-box__message__text
+                明日、5%還元クーポンの有効期限が切れます！タップして詳細を確認しましょう。
+              .a-right-content__block__object__link-box__message__time
+                20時間前
+            %i.fa.fa-angle-right.fa-2x
+        %li
+          .a-right-content__block__object__link-box
+            .a-right-content__block__object__link-box__figure
+              = image_tag 'https://static.mercdn.net/images/mercari_profile.png', size: '60x60'
+            .a-right-content__block__object__link-box__message
+              .a-right-content__block__object__link-box__message__text
+                《まもなく終了！》休暇中に出品して売上金を２倍にしよう！いますぐチェック♪
+              .a-right-content__block__object__link-box__message__time
+                2日前
+            %i.fa.fa-angle-right.fa-2x
+        %li
+          .a-right-content__block__object__link-box
+            .a-right-content__block__object__link-box__figure
+              = image_tag 'https://static.mercdn.net/images/mercari_profile.png', size: '60x60'
+            .a-right-content__block__object__link-box__message
+              .a-right-content__block__object__link-box__message__text
+                3日後、5%還元クーポンが切れますTT
+              .a-right-content__block__object__link-box__message__time
+                2日前
+            %i.fa.fa-angle-right.fa-2x
+        %li
+          .a-right-content__block__object__link-box
+            .a-right-content__block__object__link-box__figure
+              = image_tag 'https://static.mercdn.net/images/member_photo_noimage_thumb.png', size: '60x60'
+            .a-right-content__block__object__link-box__message
+              .a-right-content__block__object__link-box__message__text
+                りーさん、他2人が「えんぴつ」にいいね！しました
+              .a-right-content__block__object__link-box__message__time
+                2日前
+            %i.fa.fa-angle-right.fa-2x
+        %li
+          .a-right-content__block__object__link-box
+            .a-right-content__block__object__link-box__figure
+              = image_tag 'https://static.mercdn.net/images/mercari_profile.png', size: '60x60'
+            .a-right-content__block__object__link-box__message
+              .a-right-content__block__object__link-box__message__text
+                7日後、5%還元クーポンが期限切れになります
+              .a-right-content__block__object__link-box__message__time
+                6日前
+            %i.fa.fa-angle-right.fa-2x
+        %li
+          .a-right-content__block__object__link-box
+            .a-right-content__block__object__link-box__check
+              一覧をみる
+
+
+
+
+
+    .a-right-content__block
+    
+
+
+
+
+
+
+
+
+
+= render 'shared/footer'

@@ -1,0 +1,146 @@
+// トップ下
+.breadcrumb__box {
+  background-color: white;
+  border-top: 1px solid #eee;
+  box-shadow: 0 3px 3px 0 rgba(0,0,0,0.16);
+  .breadcrumbs-list{
+    width: 72%;
+    margin: 0 auto;
+    padding: 16px 10px;
+    font-size: 14px;
+    a {
+      text-decoration: none;
+      color: #333
+    }
+  }
+}
+
+
+
+
+// メインコンテンツ
+
+.mypage-main-content{
+  padding: 40px;
+  width: 1020px;
+  margin: 40px auto 0 ;
+  display: flex;
+  align-items:flex-start;
+  background-color:#f5f5f5;
+}
+
+// サイドバー
+
+.left-content{
+  flex-basis: 280px;
+  margin-right:40px;
+  &__bar{
+    font-size: 14px;
+    color: #333;
+    margin-bottom: 40px;
+    }
+    ul{
+      padding-inline-start:0;
+      li{
+        background-color:white;
+        padding: 16px;
+        display: flex;
+        align-items:center;
+        border-top: 1px solid #eee;
+        position: relative;
+        a {
+          text-decoration: none;
+          color: #333;
+        }
+          .fa-chevron-right{
+            display: block;
+            margin: 0 0 0 auto;
+            color: #ccc;
+          }
+      }
+    }
+  }
+
+
+
+// ライトコンテンツ
+// 画像の表示がされない
+
+.a-right-content{
+  width: 700px;
+  #back-img{
+    background-image: url("https://freemarket-sample-58a.com/assets/mypage/background_image-d9b677d513a16774c9ceccc9734f9978b19df2129c96ed0f00d4516890682d39.png");
+    height:200px;
+    margin-bottom: 0px;
+  }
+}
+
+
+.a-right-content__block{
+  width:100%;
+  flex-direction:column;
+  margin-bottom: 40px;
+  font-size: 14px;
+  &__user{
+    text-align:center;
+    padding-top: 40px;
+    margin: 8px 0 0;
+    font-size: 14px;
+  }
+}
+.user-icon {
+  border-radius: 50px;
+}
+
+.a-right-content__block__tabs{
+  border: 0;
+  background: #eee;
+  font-size: 0;
+  height:74px;
+  width: 100%;
+  font-size: 16px;
+  display: flex;
+  ul{
+    background-color: #eee;
+    li {
+      width: 50%;
+      height: 100%;
+    }
+  }
+}
+
+
+.mypage-center {
+  display: inline-block;      /* インラインブロック要素にする */
+  padding:  20px;             /* 余白指定 */
+  width: 50%;
+  text-align: center;
+}
+
+
+.a-right-content__block__object{
+  width: 100%;
+  &__link-box{
+    background-color: white;
+    align-items: center;
+    padding: 16px;
+    display: flex;
+    flex-direction: row;
+    margin-top: 1px;
+    &__message{
+      width: 560px;
+      padding-left: 20px;
+    }
+  }
+}
+
+.a-right-content__block__object__link-box__check{
+  display: block;
+  height: 56px;
+  margin: 0 auto;
+  background: #eee;
+  color: #333;
+  line-height: 56px;
+  text-align: center;
+  width: 650px;
+}
