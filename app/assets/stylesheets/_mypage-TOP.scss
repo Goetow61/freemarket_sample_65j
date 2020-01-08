@@ -14,12 +14,7 @@
     }
   }
 }
-
-
-
-
 // メインコンテンツ
-
 .mypage-main-content{
   padding: 40px;
   width: 1020px;
@@ -28,9 +23,7 @@
   align-items:flex-start;
   background-color:#f5f5f5;
 }
-
 // サイドバー
-
 .left-content{
   flex-basis: 280px;
   margin-right:40px;
@@ -60,11 +53,7 @@
       }
     }
   }
-
-
-
 // ライトコンテンツ
-
 .a-right-content{
   width: 700px;
   #back-img{
@@ -73,7 +62,6 @@
     margin-bottom: 0px;
   }
 }
-
 
 .a-right-content__block{
   width:100%;
@@ -108,14 +96,11 @@
   }
 }
 
-
 .mypage-center {
-  display: inline-block;      /* インラインブロック要素にする */
-  padding:  20px;             /* 余白指定 */
+  display: inline-block; 
   width: 50%;
   text-align: center;
 }
-
 
 .a-right-content__block__object{
   width: 100%;
