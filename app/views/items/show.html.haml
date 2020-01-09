@@ -79,6 +79,7 @@
         %p
           送料込み
       .proseed-to-order
+        = button_to "購入する", purchase_index_path(@item), {method: :get, params: @item} 
         購入画面に進む
       
 
