@@ -1,8 +1,8 @@
--# mypageのビューを作成
+- breadcrumb :mypage
 = render 'shared/header'
 .breadcrumb__box
   .breadcrumbs-list
-    %a メルカリ › マイページ
+    = render "layouts/breadcrumbs"
 
 .mypage-main-content
   .left-content
