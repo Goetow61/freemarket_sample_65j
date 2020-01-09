@@ -31,6 +31,7 @@ body{
     i {
       font-size: 60px;
       top: 60px;
+      z-index:1;
     }
   }
 
@@ -88,8 +89,9 @@ body{
           border-color: initial;
           border-image: initial;
           border-radius: 0px 4px 4px 0px;
-          padding: 0px;
+          margin: 3px;
         }
+        
       }
      }
    }
@@ -106,6 +108,8 @@ body{
         display: flex;
         justify-content: flex-start;
         line-height: 44px;
+        position: relative;
+
         .icon-red{
           color: red;
         }
@@ -113,19 +117,23 @@ body{
           color: inherit;
           text-decoration: none;
         }
-
-        &-first{
-          height: 36px;
-          width: 150px;
-          margin: 5px;
-          font-weight: 600px;
-        }
+         i{
+          position: absolute;
+          left: -20%;
+         }
+        
         &-second{
           height: 36px;
           width: 160px;
           font-weight: 600px;
-          left: 200px;
+          left: 10px;
           padding-left: 30px;
+          position: relative;
+
+          i{
+            position: absolute;
+            left: 3%;
+           }
       }
     }
       &-right{
