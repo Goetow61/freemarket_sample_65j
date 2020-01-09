@@ -24,7 +24,7 @@
         color:#333333;
         margin: 2px;
         background-color: white;
-      }
+        }
 
       &-image{
         width: 700px;
@@ -38,18 +38,17 @@
         label{
           font-size: 16px;
           color:#333333;
-        }
+          }
         input{
           display: none;
-        }
+          }
         #text{
           font-size: 14px;
           color :#333333;
           margin: 8px;
-
-        }
+         }
         
-          }
+     }
       &-items{
         width: 700px;
         height:355px;
@@ -57,24 +56,26 @@
         margin: 2px;
         padding: 40px;
         box-sizing: border-box;
+
         label{
           font-size: 14px;
           color:#333333;
-        }
+          }
         input{
           width: 620px;
           height:48px;
           border-radius: 5px;
-        }
+          }
         .content-items__description{
           margin: 40px 0 0;
-        }
+          }
         textarea{
           width: 620px;
           height:142px;
           border-radius: 5px;
-        }
-        }
+         }
+      }
+
       &-detail{
         width: 700px;
         height:261px;
@@ -84,18 +85,12 @@
         justify-content: space-between;
         box-sizing: border-box;
 
-       label{
-         color: #888888;
-       }
-
         &__header{
           font-size: 14px;
           color: #888888;
           font-weight: bold;
-        }
-        // &__box{
-        //   width: 400px;
-       
+         }
+        
           select{
             width: 400px;
             height:48px;
@@ -104,20 +99,10 @@
             -webkit-appearance: none;
             -moz-appearance: none;
             appearance: none;
-            // position: relative;
-//             background-image: url(./images/fa-chevron-down.jpg);
-//             background-repeat: no-repeat;
-// background-size: 10px 30px;
-// background-position: right 10px center;
-// i{
-//   right: 40%;
-//   position: absolute;
-//   margin-top: 15px;
-//   z-index: 100;
-// }
-          
-        }
-        
+           }
+           label{
+            color: #888888;
+           }
       }
       &-delivery{
         width: 700px;
@@ -133,16 +118,17 @@
         font-size: 14px;
         color: #888888;
         font-weight: bold;
-      }
+        }
+        
       &__detail{
         background-color: white;
-      
-        &__method{
-          padding-top: 40px;
-        }
-        &__area{
-          padding-top: 40px;
-        }
+    
+      &__method{
+        padding-top: 40px;
+      }
+      &__area{
+        padding-top: 40px;
+      }
       &__date{
           padding-top: 40px;
         }
@@ -159,13 +145,8 @@
             appearance: none;
             position: relative;
           }
-        }
-        // i{
-        //   right: 30%;
-        //   position: absolute;
-        //   margin-top: 15px;
-        // }
-        } 
+     }    
+   } 
         &__price{
           width: 700px;
           height:299px;
@@ -180,24 +161,26 @@
             color: #888888;
             font-weight: bold;
           }
+
           &__right{
             width: 400px;
             height:299px;
           }
           
-            &__selling{
-              padding: 0 0 24px;
-              border-bottom: solid 1px #cac6c6;
-              display: flex;
-              justify-content: space-between;
-            }
-            &__commission{
-              padding: 24px 0 ;
-              border-bottom: solid 1px #cac6c6;
-            }
-            &__profit{
-              padding: 24px 0 ;
-            }
+          &__selling{
+            padding: 0 0 24px;
+            border-bottom: solid 1px #cac6c6;
+            display: flex;
+            justify-content: space-between;
+          }
+          
+          &__commission{
+            padding: 24px 0 ;
+            border-bottom: solid 1px #cac6c6;
+          }
+          &__profit{
+            padding: 24px 0 ;
+          }
           
           input{
             width: 160px;
@@ -234,13 +217,8 @@
               margin-left: 170px;
               color: white;
              }
-          }
-          // i{
-          //   right: 30%;
-          //   position: absolute;
-          //   margin-top: 15px;
-          // }
-      }
+          } 
+       }
      }
   .listing-default--require{
     background-color: #ea352d;
