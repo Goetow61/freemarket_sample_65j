@@ -16,7 +16,7 @@ class Users::RegistrationsController < Devise::RegistrationsController
  end
 
  def destroy
-  # @user = current.user
+  # @user = current.user          //今はログアウト画面に行きたいだけのためコメントアウト
   # item = Item.find(params[:id])
   # item.destroy
   # redirect_to root_path
