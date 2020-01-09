@@ -29,10 +29,11 @@ class PurchaseController < ApplicationController
       render :done
       # redirect_to action: 'done' #完了画面に移動
     end
-
+    
     
     
     private
+    
     
     def set_item
       @item = Item.find(params[:format])

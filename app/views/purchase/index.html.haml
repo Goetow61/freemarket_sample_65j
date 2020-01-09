@@ -1,28 +1,70 @@
-%h2 購入を確定しますか？
+-# ヘッダー
 
-.buy-product-name
-= @item.item_name
+.signup-wrapper
+  .single-header
+    %h1.single-header__logo
+      = link_to root_path do 
+        = image_tag "fmarket_logo_red.svg"
+    
+    
+-# メインコンテンツ
 
-.buy-product-price
-¥
-= @item.price
-（送料込み）
+.buy-main
+  .buy-main__box
+    .buy-content
+      %h2.buy-content__header
+        購入内容の確認
 
-%br
-%h3 支払い方法
-- if @default_card_information.blank?
-  %br /
-- else
-  -#以下カード情報を表示
-  = "**** **** **** " + @default_card_information.last4
-  - exp_month = @default_card_information.exp_month.to_s
-  - exp_year = @default_card_information.exp_year.to_s.slice(2,3)
-  = exp_month + " / " + exp_year
-%br
-.buy-content__user-info__inner
-  %h3 配送先
-  .user-info-text
-    = @addresses.postal_code.to_s
-    %br
-    = @addresses.prefecture + @addresses.city + @addresses.address + @addresses.building_name
-= button_to "購入する",  pay_purchase_index_path(@item), {method: :post, params: @item} 
+      .buy-content__product
+        .buy-content__product__inner
+          .buy-product-main
+            .buy-product-image
+              = image_tag @item.images.first.src.url, size: "80x80"
+            .buy-product-name
+              = @item.item_name
+              
+          %form.buy-form
+            %p.buy-price  
+              ¥
+              = @item.price
+              送料込み
+            .buy-have-point
+              ポイントはありません
+            .buy-price-table
+              .buy-price-table__left
+                支払い金額
+              .buy-price-table__right
+                ¥
+                = @item.price
+            .buy-price-button
+              = link_to "購入する",  pay_purchase_index_path(@item), {method: :post, params: @item} 
+      
+      .buy-content__user-info
+        .buy-content__user-info__inner
+          %br
+          %h3 支払い方法
+          - if @default_card_information.blank?
+            %br /
+          - else
+            -#以下カード情報を表示
+            = "**** **** **** " + @default_card_information.last4
+            - exp_month = @default_card_information.exp_month.to_s
+            - exp_year = @default_card_information.exp_year.to_s.slice(2,3)
+            = exp_month + " / " + exp_year
+          %br
+          %p.text
+            変更する >
+
+      .buy-content__user-info
+        .buy-content__user-info__inner
+          %h3 配送先
+          .user-info-text
+            = @addresses.postal_code.to_s
+            %br
+            = @addresses.prefecture + @addresses.city + @addresses.address + @addresses.building_name    
+            %p.text
+              変更する >    
+
+
+-# フッター
+= render "shares/regacc_footer"
