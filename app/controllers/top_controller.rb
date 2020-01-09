@@ -4,5 +4,8 @@ class TopController < ApplicationController
     @ladies = Item.where(category: "レディース").take(10)
   end
 
+  def new
+  end
+
  
 end
