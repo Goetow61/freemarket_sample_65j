@@ -15,7 +15,13 @@ class Users::RegistrationsController < Devise::RegistrationsController
  def show
  end
 
- 
+ def destroy
+  # @user = current.user          //今はログアウト画面に行きたいだけのためコメントアウト
+  # item = Item.find(params[:id])
+  # item.destroy
+  # redirect_to root_path
+end
+
  # POST /resource
  require "payjp"
  
