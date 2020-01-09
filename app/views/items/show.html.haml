@@ -1,0 +1,129 @@
+= render 'shared/header'
+.top-show
+  .main-content
+  .detail-area
+    .title
+      %h1.title__itemname
+        = @item.item_name
+    .detail
+      .left-preview
+        .left-preview__bigone
+          = image_tag @item.images.first.src.url, size: "300x340", alt: "sample1", class:'smallpreview'
+        .left-preview__smallten
+          
+      .right-table
+        %table.right-table__sellar
+          %tr
+            %th.right-table__sellar--heading
+              出品者
+            %th.right-table__sellar--value
+              = @item.user.nickname
+              %br
+              %i.fas.fa-smile
+                %span
+                  0 
+              %i.fas.fa-meh
+                %span
+                  0 
+              %i.fas.fa-frown
+                %span
+                  0
+          %tr
+            %th.right-table__sellar--heading
+              カテゴリー
+            %th.right-table__sellar--value
+              = @item.category
+          %tr
+            %th.right-table__sellar--heading
+              ブランド
+            %th.right-table__sellar--value
+              UNIQLO
+          %tr
+            %th.right-table__sellar--heading
+              商品のサイズ
+            %th.right-table__sellar--value
+              L
+          %tr
+            %th.right-table__sellar--heading
+              商品の状態
+            %th.right-table__sellar--value
+              = @item.status
+          %tr
+            %th.right-table__sellar--heading
+              配送料の負担
+            %th.right-table__sellar--value
+              送料込み
+          %tr
+            %th.right-table__sellar--heading
+              配送の方法
+            %th.right-table__sellar--value
+              = @item.postmethod
+          %tr
+            %th.right-table__sellar--heading
+              配送元地域
+            %th.right-table__sellar--value
+              = @item.streetadress
+          %tr
+            %th.right-table__sellar--heading
+              発送日の目安
+            %th.right-table__sellar--value
+              = @item.days
+
+    .buy-section
+      .product-price
+        .product-price__price
+          ¥
+          = @item.price 
+        .product-price__taxin
+          (税込)
+        %p
+          送料込み
+      .proseed-to-order
+        = button_to "購入する", purchase_index_path(@item), {method: :get, params: @item} 
+        購入画面に進む
+      
+
+    -# 以降のコメントをmysqlにstringで放り込むが、ちゃんと改行コード入れられるのか？
+    .detail-comment
+      = @item.detail 
+      %br
+      
+    .evaluation-section
+      .left-box
+        .evaluation-section__like
+         
+          %i.far.fa-heart
+          %span
+            いいね!
+          .evaluation-section__like__like-count
+            10
+        .evaluation-section__report-warning
+          %i.far.fa-flag
+          %span
+            不適切な商品の報告
+      .evaluation-section__security-report
+        %i.fas.fa-lock
+        %span
+          あんしん・あんぜんへの取り組み
+
+    .icon  
+      .icon__box
+        = link_to "https://www.facebook.com/login.php?skip_api_login=" do
+          .facebook
+            %i.fab.fa-facebook-square
+      .icon__box
+        = link_to "https://twitter.com/intent/tweet?text=" do
+          .twitter
+            %i.fab.fa-twitter
+      .icon__box
+        = link_to "https://www.pinterest.jp/" do
+          .pinterest
+            %i.fab.fa-pinterest.fa-xs
+  = render 'shared/footer'
+  
+
+= link_to '編集', edit_item_path
+
+= link_to '削除', item_path, method: :delete
+
+

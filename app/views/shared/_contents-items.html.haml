@@ -1,11 +1,14 @@
 .contents-main__new__category__items
-  - @ladies.each do |l|
+  - @ladies.each do |item|
     .contents-main__new__category__items__card
       .contents-main__new__category__items__card__img
-        = image_tag l.images.first.src.url, size: "188x182", alt: "sample1"
+        = link_to item_path(item) do
+          = image_tag item.images.first.src.url, size: "188x182", alt: "sample1"
         .contents-main__new__category__items__card__img__money
-          ¥
-          = l.price
+          = link_to item_path(item) do
+            ¥
+            = item.price
       .contents-main__new__category__items__card__text
-        = l.item_name
+        = link_to item_path(item) do
+          = item.item_name
       

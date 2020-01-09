@@ -8,9 +8,10 @@ Rails.application.routes.draw do
     get 'addresses', to: 'users/registrations#new_address'
     post 'addresses', to: 'users/registrations#create_address'
     post 'card',      to: 'users/registrations#create_card'
+    get 'show',      to: 'users/registrations#show'
   end
   root to: 'top#index'
-  resources :items, only: [:index, :show, :new, :edit, :destroy, :create] do
+  resources :items do
     #Ajaxで動くアクションのルートを作成
     collection do
       get 'get_category_children', defaults: { format: 'json' }
