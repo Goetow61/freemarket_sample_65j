@@ -1,36 +1,145 @@
-%h2
-  Edit #{resource_name.to_s.humanize}
-= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f|
-  = render "devise/shared/error_messages", resource: resource
-  .field
-    = f.label :email
-    %br/
-    = f.email_field :email, autofocus: true, autocomplete: "email"
-  - if devise_mapping.confirmable? && resource.pending_reconfirmation?
-    %div
-      Currently waiting confirmation for: #{resource.unconfirmed_email}
-  .field
-    = f.label :password
-    %i (leave blank if you don't want to change it)
-    %br/
-    = f.password_field :password, autocomplete: "new-password"
-    - if @minimum_password_length
-      %br/
-      %em
-        = @minimum_password_length
-        characters minimum
-  .field
-    = f.label :password_confirmation
-    %br/
-    = f.password_field :password_confirmation, autocomplete: "new-password"
-  .field
-    = f.label :current_password
-    %i (we need your current password to confirm your changes)
-    %br/
-    = f.password_field :current_password, autocomplete: "current-password"
-  .actions
-    = f.submit "Update"
-%h3 Cancel my account
-%p
-  Unhappy? #{button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete}
-= link_to "Back", :back
+-# %h2
+-#   Edit #{resource_name.to_s.humanize}
+-# = form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f|
+-#   = render "devise/shared/error_messages", resource: resource
+-#   .field
+-#     = f.label :email
+-#     %br/
+-#     = f.email_field :email, autofocus: true, autocomplete: "email"
+-#   - if devise_mapping.confirmable? && resource.pending_reconfirmation?
+-#     %div
+-#       Currently waiting confirmation for: #{resource.unconfirmed_email}
+-#   .field
+-#     = f.label :password
+-#     %i (leave blank if you don't want to change it)
+-#     %br/
+-#     = f.password_field :password, autocomplete: "new-password"
+-#     - if @minimum_password_length
+-#       %br/
+-#       %em
+-#         = @minimum_password_length
+-#         characters minimum
+-#   .field
+-#     = f.label :password_confirmation
+-#     %br/
+-#     = f.password_field :password_confirmation, autocomplete: "new-password"
+-#   .field
+-#     = f.label :current_password
+-#     %i (we need your current password to confirm your changes)
+-#     %br/
+-#     = f.password_field :current_password, autocomplete: "current-password"
+-#   .actions
+-#     = f.submit "Update"
+-# %h3 Cancel my account
+-# %p
+-#   Unhappy? #{button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete}
+-# = link_to "Back", :back      
+ //今は見た目だけのためコメントアウト↑
+= render 'shared/header'
+.breadcrumb__box
+  .breadcrumbs-list
+    %a メルカリ › マイページ
+.mypage-main-content
+  .left-content
+    .left-content__bar
+      %ul
+        %li
+          = link_to 'マイページ', "/show"
+          %br/
+          %i.fa.fa-chevron-right
+        %li
+          = link_to '#' do
+            お知らせ
+          %i.fa.fa-chevron-right
+        %li
+          = link_to '#' do
+            やることリスト
+          %i.fa.fa-chevron-right
+        %li
+          = link_to '#' do
+            いいね！一覧
+          %i.fa.fa-chevron-right
+        %li
+          = link_to '出品する', "items/new"
+          %i.fa.fa-chevron-right
+        %li
+          = link_to '出品した商品-出品中', "#"
+          %i.fa.fa-chevron-right
+        %li
+          = link_to '出品した商品-取引中', "#"
+          %i.fa.fa-chevron-right
+        %li
+          = link_to '出品した商品-売却済み', "#"
+          %i.fa.fa-chevron-right
+        %li
+          = link_to '購入した商品-取引中', "#"
+          %i.fa.fa-chevron-right
+        %li
+          = link_to '購入した商品-過去の取引', "#"
+          %i.fa.fa-chevron-right
+        %li
+          = link_to '#' do
+            ニュース一覧
+          %i.fa.fa-chevron-right
+        %li
+          = link_to '評価一覧', "#"
+          %i.fa.fa-chevron-right
+        %li
+          = link_to '#' do
+            ガイド
+          %i.fa.fa-chevron-right
+        %li
+          = link_to '#' do
+            お問い合わせ
+          %i.fa.fa-chevron-right
+    .left-content__bar
+      %h4 売り上げ・ポイント
+      %ul.marginT-8px
+        %li
+          = link_to '#' do
+            売上・振込申請
+          %i.fa.fa-chevron-right
+        %li
+          = link_to '#' do
+            ポイント
+          %i.fa.fa-chevron-right
+    .left-content__bar
+      %h4 設定
+      %ul.marginT-8px
+        %li
+          = link_to 'プロフィール', "#"
+          %i.fa.fa-chevron-right
+        %li
+          = link_to '住所変更', "#"
+          %i.fa.fa-chevron-right
+        %li
+          = link_to '支払い方法', "#"
+          %i.fa.fa-chevron-right
+        %li
+          = link_to '#' do
+            メール/パスワード
+          %i.fa.fa-chevron-right
+        %li
+          = link_to '本人情報', "#"
+          %i.fa.fa-chevron-right
+        %li
+          = link_to '#' do
+            電話番号の確認
+          %i.fa.fa-chevron-right
+        %li
+          = link_to 'ログアウト', "#"
+          %i.fa.fa-chevron-right
+  .right-brock
+    .right-brock__header 
+      プロフィール
+    .right-brock__person
+      .right-brock__person__icon
+        = image_tag 'https://static.mercdn.net/images/member_photo_noimage_thumb.png', size: '60x60', alt: 'user-icon', class:"user-icon"
+      .right-brock__person__name
+        AAAAAAAA
+    .right-brock__textarea
+      例）こんにちは☆ ご覧いただきありがとうございます！かわいいものやきれいめオフィスカジュアル中心に出品しています。服のサイズは主に9号です。気持ちよくお取引できるよう心がけていますので、商品や発送方法などご質問がありましたらお気軽にどうぞ♪
+    .right-brock__btn
+      変更する
+= render 'shared/sell-button'
+= render 'shared/footer'
