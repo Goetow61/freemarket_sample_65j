@@ -10,6 +10,7 @@ Rails.application.routes.draw do
     post 'card',      to: 'users/registrations#create_card'
     get 'show',      to: 'users/registrations#show'
     get 'destroy',   to: 'users/registrations#destroy'
+    get 'edit',  to: 'users/registrations#edit'
   end
   root to: 'top#index'
   resources :items do

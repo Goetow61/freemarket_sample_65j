@@ -11,6 +11,9 @@ class Users::RegistrationsController < Devise::RegistrationsController
    @user = User.new
  end
 
+def edit
+end
+
 
  def show
  end
