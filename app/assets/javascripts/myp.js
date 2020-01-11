@@ -3,6 +3,7 @@ $(function() {
   // タブのDOM要素取得
   let tabs = $(".mypage-center");
   // tabsを配列に変換
+  var tabsAry = Array.prototype.slice.call(tabs);
   
   
   // console.log(tabs);
