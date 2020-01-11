@@ -167,6 +167,7 @@
 
 .a-right-content__block2__object2 {
   width: 100%;
+  display:none;
   &__link-box2{
     background-color: white;
     align-items: center;
@@ -189,6 +190,9 @@
     }
     }
   }
+}
+.a-right-content__block2__object2.show{
+  display:block;
 }
 
 .a-right-content__block2__tabs2 {
