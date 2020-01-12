@@ -1,0 +1,116 @@
+@mixin  box{
+  width: 350px;
+  height: 72px;
+  background-color: white;
+  text-align: center;
+  box-sizing: border-box;
+  color: #333333;
+  font-weight: 900;
+  padding-top: 20px;
+}
+@mixin list{
+  width: 700px;
+  height: 80px;
+  background-color: white;
+  box-sizing: border-box;
+  border-bottom: #f5f5f5 solid 2px;
+
+  a{
+    color: #888888;
+  }
+  img{
+    padding-top: 10px;
+  }
+  i{
+    padding-top: 15px;
+    right: 15%;
+  }
+}
+
+
+.right-box{
+
+
+
+  &__header{
+    background-image: url("https://freemarket-sample-58a.com/assets/mypage/background_image-d9b677d513a16774c9ceccc9734f9978b19df2129c96ed0f00d4516890682d39.png");
+    width: 700px;
+    height: 200px;
+    text-align: center;
+    box-sizing: border-box;
+    padding-top: 50px;
+  }
+
+  &__btn{
+    display: flex;
+
+    &__first{
+      @include box;
+      border-top: red solid;
+    }
+    &__second{
+      @include box;
+      background-color: #f5f5f5;
+    }
+  }
+
+  &__list__first{
+    @include list
+  }
+  &__list__second{
+    @include list
+  }
+  &__list__third{
+    @include list;
+    text-align: center;
+    padding-top: 20px;
+
+    a{
+      padding: 15px 280px 25px;
+      background-color: #f5f5f5;
+      }
+  }
+  .right-bottom{
+    width: 700px;
+    height: 380px;
+    background-color: white;
+    margin-top: 50px;
+
+    &__header{
+      width: 350px;
+      height: 72px;
+      background-color: white;
+      padding: 20px;
+      box-sizing: border-box;
+      font-weight: 600;
+      color: #888888;
+    }
+    &__btn{
+       display: flex;
+
+      &__first{
+        @include box;
+        border-top: red solid;
+      }
+      
+      &__second{
+        @include box;
+        background-color: #f5f5f5;
+        }
+      }
+    &__main{
+     
+      img{
+        width: 150px;
+        height: 150px;
+        padding: 20px 0 20px 280px;
+        color: #f5f5f5;
+       }
+      &__text{
+        color: #b1b0b0;
+        text-align: center;
+        font-weight: 600;
+        }
+    }
+  }
+}
