@@ -11,6 +11,7 @@ Rails.application.routes.draw do
     get 'show',      to: 'users/registrations#show'
     get 'destroy',   to: 'users/registrations#destroy'
     get 'edit',  to: 'users/registrations#edit'
+    get 'index', to: 'users/confirmations#index'
   end
   root to: 'top#index'
   resources :items do
