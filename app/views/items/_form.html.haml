@@ -1,23 +1,37 @@
 .contents
   .content
-    .content-header
-      %h 商品の情報を入力
-    .content-image
-      出品画像
-      %span.listing-default--require 必須
-      #text 最大10枚までアップロードできますアップロードできます
-      = form_for(@item, url: items_path) do |f|
-        %label 
-          .a
-            ドラッグアンドドロップ
-            %br/
-            またはクリックしてファイルをアップロード
-          = f.file_field :image,class:"file_field"
+    = form_for(@item, url: items_path) do |f|
+      .content-header
+        %h 商品の情報を入力
+      .content-image
+        出品画像
+        %span.listing-default--require 必須
+        -# #text 最大10枚までアップロードできますアップロードできます
+        %span.content-image-comment 最大10枚までアップロードできますアップロードできます
+        
+        -# %label 
+        -#   .a
+        -#     ドラッグアンドドロップ
+        -#     %br/
+        -#     またはクリックしてファイルをアップロード
+        -#   = f.file_field :image,class:"file_field"
+
           
         #previews
         - if @item.persisted?
           - @item.images.each_with_index do |image, i|
             = image_tag image.src.url, data: { index: i }, width: "100", height: '100'
+
+        -# #image-box.image-box
+        -#   = f.fields_for :images do |image|
+        -#     .js-file_group{"data-index" => "#{image.index}"}
+        -#     .form__mask
+        -#       = image.label :src, class: 'form__mask__image' do
+        -#         = image.file_field :src, class: 'js-file'
+        -#         ドラッグアンドドロップ
+        -#         %br/
+        -#         またはクリックしてファイルをアップロード
+        -#         %span.js-remove 
 
         #image-box
           = f.fields_for :images do |image|
@@ -25,129 +39,112 @@
               = image.file_field :src, class: 'js-file'
               %br/
               %span.js-remove 
-    .content-items
-      = form_for(@item, url: items_path) do |f|
+
+      .content-items
         = f.label '商品名'
         %span.listing-default--require 必須
-      = form_for(@item, url: items_path) do |f|
         = f.text_field :item_name, placeholder: "商品名 (必須40文字まで)"
         %br/
         .content-items__description
-          = form_for(@item, url: items_path) do |f|
-            = f.label '商品の説明'
-            %span.listing-default--require 必須
-        = form_for(@item, url: items_path) do |f|
-          = f.text_area :detail, placeholder: "商品の説明 (必須1,000文字以内)   (色、素材、重さ、定価、注意点など) 例)"
-          %br/
-    .content-detail
-      .content-detail__header
-        商品の詳細
-      .content-detail__box
-        .listing-form-box
-        .listing-product-detail__category
-        = form_for(@item, url: items_path) do |f|
-          = f.label 'カテゴリー', class: 'listing-default__label'
+          = f.label '商品の説明'
           %span.listing-default--require 必須
-          .listing-select-wrapper
-            .listing-select-wrapper__box
-              -# %i.fas.fa-chevron-down.listing-select-wrapper__box--arrow-down
-              = f.select :category, @category_parent_array, {}, {class: 'listing-select-wrapper__box--select', id: 'parent_category'}  
-              %i.fas.fa-chevron-down.listing-select-wrapper__box--arrow-down
-        %br/      
-        .listing-product-detail__state
-          = form_for(@item, url: items_path) do |f|
+        = f.text_area :detail, placeholder: "商品の説明 (必須1,000文字以内)   (色、素材、重さ、定価、注意点など) 例)"
+        %br/
+      .content-detail
+        .content-detail__header
+          商品の詳細
+        .content-detail__box
+          -# .listing-form-box
+          .listing-product-detail__category-parent
+            = f.label 'カテゴリー', class: 'listing-default__label'
+            %span.listing-default--require 必須
+            .listing-select-wrapper
+              .listing-select-wrapper__box
+                = f.select :category, @category_parent_array, {}, {class: 'listing-select-wrapper__box--select', id: 'parent_category'}  
+                %i.fas.fa-chevron-down.listing-select-wrapper__box--arrow-down
+            %br/      
+          -# .listing-product-detail__category
+          .listing-product-detail__category-child
+          .listing-product-detail__category-grandchild
+          .listing-product-detail__state
             = f.label '商品の状態'
             %span.listing-default--require 必須
-          = form_for(@item, url: items_path) do |f|
             = f.select :status, Item.statuses.keys, {prompt: '---'}
             %i.fas.fa-chevron-down
             %br/
-    .content-delivery
-      .content-delivery__header
-        配送について
-        = link_to '#' do
-          .fas.fa-question-circle
-      .content-delivery__detail
-        .content-delivery__detail__burden
-          = form_for(@item, url: items_path) do |f|
+      .content-delivery
+        .content-delivery__header
+          配送について
+          = link_to '#' do
+            .fas.fa-question-circle
+        .content-delivery__detail
+          .content-delivery__detail__burden
             = f.label '配送料の負担'
             %span.listing-default--require 必須
-          = form_for(@item, url: items_path) do |f|
             = f.select :postage,  [ ["送料込み(出品者負担)","1"], ["着払い(購入者負担)","2"]],prompt: "---"
             %i.fas.fa-chevron-down 
             %br/
-        -# .content-delivery__detail__method
-        -#   = form_for(@item, url: items_path) do |f|
-        -#     = f.label '発送の方法'
-        -#     %span.listing-default--require 必須
-        -#   = form_for(@item, url: items_path) do |f|
-        -#     = f.select :postmethod, Item.methods.keys, {prompt: '---'}
-        -#     %br/
-        .content-delivery__detail__area
-          = form_for(@item, url: items_path) do |f|
+          .content-delivery__detail__method
+            = f.label '発送の方法'
+            %span.listing-default--require 必須
+            = f.select :postmethod, Item.methods.keys, {prompt: '---'}
+            %i.fas.fa-chevron-down
+            %br/
+          .content-delivery__detail__area
             = f.label '発送元の地域'
             %span.listing-default--require 必須
-          = form_for(@item, url: items_path) do |f|
             = f.select :streetadress, Item.addresses.keys, {prompt: '---'}
             %i.fas.fa-chevron-down
             %br/
-        .content-delivery__detail__date
-          = form_for(@item, url: items_path) do |f|
+          .content-delivery__detail__date
             = f.label '発送までの日数'
             %span.listing-default--require 必須
-          = form_for(@item, url: items_path) do |f|
             = f.select :days, [ ["1~2日で発送","1"], ["2~3日で発送","2"], ["4~7日で発送"]],prompt: "---"
             %i.fas.fa-chevron-down
             %br/
-    .content__price
-      .content__price__header
-        販売価格(300〜9,999,999)
-        = link_to '#'do
-          .fas.fa-question-circle
-      .content__price__right
-        .content__price__selling
-          = form_for(@item, url: items_path) do |f|
-            = f.label '価格'
-            %span.listing-default--require 必須
-          ¥
-          = form_for(@item, url: items_path) do |f|
-            = f.number_field :price,placeholder: "  例）３００"
-            %br/
-        .content__price__commission
-          販売手数料 (10%)
-        .content__price__profit
-          販売利益
-      -# -if (:price >= 300 && :price<=999999)
-      -#   -mage = :price*0.1
+      .content__price
+        .content__price__header
+          販売価格(300〜9,999,999)
+          = link_to '#'do
+            .fas.fa-question-circle
+        .content__price__right
+          .content__price__selling
+            .content__price__selling__leftbox
+              = f.label '価格'
+              %span.listing-default--require 必須
+            .content__price__selling__rightbox
+              ¥
+              = f.number_field :price,placeholder: "  例）３００"
+              %br/
+          .content__price__commission
+            販売手数料 (10%)
+          .content__price__profit
+            販売利益
+        -# -if (:price >= 300 && :price<=999999)
+        -#   -mage = :price*0.1
 
-    .content__footer
-      .content__footer__header
-        禁止されている
-        = link_to '#'do
-          出品
-        、
-        = link_to '#'do
-          行為
-        を必ずご確認ください。
-        %br/
-        またブランド品でシリアルナンバー等がある場合はご記載ください。
-        = link_to '#'do
-          偽ブランドの販売
-        は犯罪であり処罰される可能性があります。
-        %br/
-        また、出品をもちまして
-        = link_to '#'do
-          加盟店規約
-          に同意したことになります。
-        %br/
-      .content__footer__btn
-        = form_for(@item, url: items_path) do |f|
+      .content__footer
+        .content__footer__header
+          禁止されている
+          = link_to '#'do
+            出品
+          、
+          = link_to '#'do
+            行為
+          を必ずご確認ください。
+          %br/
+          またブランド品でシリアルナンバー等がある場合はご記載ください。
+          = link_to '#'do
+            偽ブランドの販売
+          は犯罪であり処罰される可能性があります。
+          %br/
+          また、出品をもちまして
+          = link_to '#'do
+            加盟店規約
+            に同意したことになります。
+          %br/
+        .content__footer__btn
           = f.submit "出品する"
-        
           = link_to root_path do
             .content__footer__btn__return
               もどる
-
-
-  
-  
