@@ -241,20 +241,21 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        &__leftbox {
-          
-        }
-        &__rightbox {
-
-        }
+        
       }
       
       &__commission{
         padding: 24px 0 ;
         border-bottom: solid 1px #cac6c6;
+        .right_bar{
+          float: right;
+        }
       }
       &__profit{
         padding: 24px 0 ;
+        .right_bar_2{
+          float: right;
+        }
       }
       
       input{

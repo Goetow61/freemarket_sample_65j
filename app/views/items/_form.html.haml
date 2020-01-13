@@ -114,14 +114,15 @@
               %span.listing-default--require 必須
             .content__price__selling__rightbox
               ¥
-              = f.number_field :price,placeholder: "  例）３００"
+              = f.number_field :price,placeholder: "  例）３００", id: "price_calc"
               %br/
           .content__price__commission
             販売手数料 (10%)
+            .right_bar
           .content__price__profit
             販売利益
-        -# -if (:price >= 300 && :price<=999999)
-        -#   -mage = :price*0.1
+            .right_bar_2
+        
 
       .content__footer
         .content__footer__header

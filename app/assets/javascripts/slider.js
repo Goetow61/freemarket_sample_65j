@@ -1,6 +1,6 @@
 $(document).on('turbolinks:load', function() { 
 $(function() {
-  $('.slider-list').slick({
+  $('.slider-list').not('.slick-initialized').slick({
     slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: true,
