@@ -37,9 +37,7 @@
           = f.fields_for :images do |image|
             .js-file_group{"data-index" => "#{image.index}"}
               = image.file_field :src, class: 'js-file'
-              ドラッグアンドドロップ
               %br/
-              またはクリックしてファイルをアップロード
               %span.js-remove 
 
       .content-items
