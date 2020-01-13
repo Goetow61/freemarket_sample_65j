@@ -1,3 +1,4 @@
+$(document).on('turbolinks:load', ()=> {
 $(function() {
 
   // タブのDOM要素取得
@@ -59,3 +60,4 @@ $(function() {
     tabs.click(tabSwitch)
   
   });
+})
