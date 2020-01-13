@@ -1,8 +1,8 @@
--# mypageのビューを作成
+- breadcrumb :mypage
 = render 'shared/header'
 .breadcrumb__box
   .breadcrumbs-list
-    %a メルカリ › マイページ
+    = render "layouts/breadcrumbs"
 
 .mypage-main-content
   .left-content
@@ -95,9 +95,11 @@
 
     .a-right-content__block
       %ul.a-right-content__block__tabs
-        .mypage-center お知らせ
-        .mypage-center やることリスト
-      %ul.a-right-content__block__object
+        .mypage-center.active#news お知らせ
+        .mypage-center#todo やることリスト
+
+        
+      %ul.a-right-content__block__object.show
         %li
           .a-right-content__block__object__link-box
             .a-right-content__block__object__link-box__figure
@@ -107,7 +109,7 @@
                 明日、5%還元クーポンの有効期限が切れます！タップして詳細を確認しましょう。
               .a-right-content__block__object__link-box__message__time
                 20時間前
-            %i.fa.fa-angle-right.fa-2x
+                %i.fa.fa-angle-right.fa-2x
         %li
           .a-right-content__block__object__link-box
             .a-right-content__block__object__link-box__figure
@@ -153,29 +155,37 @@
             .a-right-content__block__object__link-box__check
               一覧をみる
 
-    .a-right-content__block
-      %h4.tab-head 購入した商品
-      %ul.a-right-content__block__tabs
-        .mypage-center 取引中
-        .mypage-center 過去の取引
 
-      %ul.a-right-content__block__object
+      .a-right-content__block__object
+        .a-right-content__block__object__no
+          現在やることはありません！！
+
+    .a-right-content__block2
+      %h4.tab-head 購入した商品
+      %ul.a-right-content__block2__tabs2
+        .mypage-center2.ahe 取引中
+        .mypage-center2 過去の取引
+
+      %ul.a-right-content__block2__object2.show
         %li
-          .a-right-content__block__object__link-box
-            .a-right-content__block__object__link-box__message
-              .a-right-content__block__object__link-box__message__text
+          .a-right-content__block2__object2__link-box2
+            .a-right-content__block2__object2__link-box2__message2
+              .a-right-content__block2__object2__link-box2__message2__text2
                 【送料込】THE NORTH FAITH ポケモン
-              .a-right-content__block__object__link-box__message__time
+              .a-right-content__block2__object2__link-box2__message2__time2
                 ♡7 出品中
             %i.fa.fa-angle-right.fa-2x
         %li
-        .a-right-content__block__object__link-box
-          .a-right-content__block__object__link-box__message
-            .a-right-content__block__object__link-box__message__text
+        .a-right-content__block2__object2__link-box2
+          .a-right-content__block2__object2__link-box2__message2
+            .a-right-content__block2__object2__link-box2__message2__text2
               【送料込】GAP チャックシャツ
-            .a-right-content__block__object__link-box__message__time
+            .a-right-content__block2__object2__link-box2__message2__time2
               ♡7 取引完了
           %i.fa.fa-angle-right.fa-2x
 
+      .a-right-content__block2__object2
+        .a-right-content__block__object__no
+          過去のお取引部分です！！  
 
 = render 'shared/footer'

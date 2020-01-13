@@ -10,7 +10,8 @@ class Users::ConfirmationsController < Devise::ConfirmationsController
   # def create
   #   super
   # end
-
+def index
+end
   # GET /resource/confirmation?confirmation_token=abcdef
   # def show
   #   super

@@ -1,40 +1,3 @@
--# %h2
--#   Edit #{resource_name.to_s.humanize}
--# = form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f|
--#   = render "devise/shared/error_messages", resource: resource
--#   .field
--#     = f.label :email
--#     %br/
--#     = f.email_field :email, autofocus: true, autocomplete: "email"
--#   - if devise_mapping.confirmable? && resource.pending_reconfirmation?
--#     %div
--#       Currently waiting confirmation for: #{resource.unconfirmed_email}
--#   .field
--#     = f.label :password
--#     %i (leave blank if you don't want to change it)
--#     %br/
--#     = f.password_field :password, autocomplete: "new-password"
--#     - if @minimum_password_length
--#       %br/
--#       %em
--#         = @minimum_password_length
--#         characters minimum
--#   .field
--#     = f.label :password_confirmation
--#     %br/
--#     = f.password_field :password_confirmation, autocomplete: "new-password"
--#   .field
--#     = f.label :current_password
--#     %i (we need your current password to confirm your changes)
--#     %br/
--#     = f.password_field :current_password, autocomplete: "current-password"
--#   .actions
--#     = f.submit "Update"
--# %h3 Cancel my account
--# %p
--#   Unhappy? #{button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete}
--# = link_to "Back", :back      
- //今は見た目だけのためコメントアウト↑
 = render 'shared/header'
 .breadcrumb__box
   .breadcrumbs-list
@@ -129,17 +92,47 @@
         %li
           = link_to 'ログアウト', "#"
           %i.fa.fa-chevron-right
-  .right-brock
-    .right-brock__header 
-      プロフィール
-    .right-brock__person
-      .right-brock__person__icon
+  .right-box
+    .right-box__header
+      =link_to '#' do
         = image_tag 'https://static.mercdn.net/images/member_photo_noimage_thumb.png', size: '60x60', alt: 'user-icon', class:"user-icon"
-      .right-brock__person__name
-        AAAAAAAA
-    .right-brock__textarea
-      例）こんにちは☆ ご覧いただきありがとうございます！かわいいものやきれいめオフィスカジュアル中心に出品しています。服のサイズは主に9号です。気持ちよくお取引できるよう心がけていますので、商品や発送方法などご質問がありましたらお気軽にどうぞ♪
-    .right-brock__btn
-      変更する
+      .right-box__header__name
+        AAAAAAA
+      .right-box__header__name__evaluation
+        評価 ０ 出品数 ０
+    .right-box__btn
+      .right-box__btn__first
+        お知らせ
+      .right-box__btn__second
+        やることリスト
+    .right-box__list
+      .right-box__list__first
+        =link_to '#' do
+          = image_tag "mayoi.jpg", size: "36x36", alt: "sample2"
+          《ご登録記念》¥1,000の商品を「実質1円」でご購入いただけます！
+          %i.fa.fa-chevron-right
+      .right-box__list__second
+        =link_to '#' do
+          = image_tag "mayoi.jpg", size: "36x36", alt: "sample2"
+          《新規登録者限定》”最大1,000円分のポイントがもらえる”出品キャンペーン開催中！
+          %i.fa.fa-chevron-right
+      .right-box__list__third
+        =link_to '#' do
+          一覧を見る
+
+    .right-bottom
+      .right-bottom__header
+        購入した商品
+      .right-bottom__btn
+        .right-bottom__btn__first
+          取引中
+        .right-bottom__btn__second
+          過去の取引
+      .right-bottom__main
+        = image_tag 'logo_gray.svg'
+        .right-bottom__main__text
+          取引中の商品がありません
+
 = render 'shared/sell-button'
 = render 'shared/footer'
+

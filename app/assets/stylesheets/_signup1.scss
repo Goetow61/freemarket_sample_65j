@@ -252,7 +252,7 @@
     width: 343px;
     margin: 0 auto;
     display: block;
-    padding-right: 16px;
+    padding-right: 16px;    
   }
 }
 
@@ -298,5 +298,17 @@
     margin: 0 auto;
     display: block;
     padding-right: 16px;
+    .main__conect__lists__google__btn {
+      color: #333;
+      }
+      .main__conect__lists__google__icon {
+        background-image:url("https://i.gyazo.com/1e79bd9bde1dd4388dea6da9231efdc4.png");
+        background-size:cover;
+        height: 30px;
+        width: 30px;
+        position: relative;
+        bottom:40px;
+        left:15px;
+      }      
   }
 }

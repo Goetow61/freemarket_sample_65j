@@ -1,0 +1,61 @@
+.right-brock{
+  height: 568px;
+  width: 700px;
+  background-color: white;
+  box-sizing: border-box;
+  
+
+  &__header{
+    height: 50px;
+    width: 700px;
+    text-align: center;
+    box-sizing: border-box;
+    padding:10px;
+    font-size: 24px;
+    color: #333333;
+    font-weight: 900;
+  }
+
+  &__person{
+    height: 156px;
+    width: 700px;
+    display: flex;
+    justify-content: center;
+    background-image: url("https://freemarket-sample-58a.com/assets/mypage/background_image-d9b677d513a16774c9ceccc9734f9978b19df2129c96ed0f00d4516890682d39.png");
+    box-sizing: border-box;
+    padding: 50px;
+
+    &__icon{
+  
+    }
+    
+
+    &__name{
+      height: 48px;
+      width: 220px;
+      background-color: white;
+      margin-left: 10px;
+      padding: 10px;
+      margin-top: 8px;
+      box-sizing: border-box;
+    }
+  }
+  &__textarea{
+    width: 668px;
+    height: 216px;
+    background-color: white;
+    border: solid 2px;
+    border-color:#dfdcdc;
+    margin: 30px 2px 30px 12px;
+  }
+  &__btn{
+    width: 668px;
+    height: 50px;
+    background-color: #ea352c;
+    color: white;
+    text-align: center;
+    box-sizing: border-box;
+    padding: 10px;
+    margin: 15px;
+  }
+}

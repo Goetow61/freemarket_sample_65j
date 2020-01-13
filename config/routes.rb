@@ -9,6 +9,9 @@ Rails.application.routes.draw do
     post 'addresses', to: 'users/registrations#create_address'
     post 'card',      to: 'users/registrations#create_card'
     get 'show',      to: 'users/registrations#show'
+    get 'destroy',   to: 'users/registrations#destroy'
+    get 'edit',  to: 'users/registrations#edit'
+    get 'index', to: 'users/confirmations#index'
   end
   root to: 'top#index'
   resources :items do

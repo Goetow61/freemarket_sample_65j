@@ -12,10 +12,10 @@ class User < ApplicationRecord
   validates :first_name_kana, presence: true, length: { maximum: 15 }, format: { with: kana }
   validates :last_name_kana, presence: true, length: { maximum: 15 }, format: { with: kana }
   validates :birthday ,presence: true
-  has_one :address
-  has_one :card
-  has_many :sns_credential
-  has_many :items
+  has_one :address, dependent: :destroy
+  has_one :card, dependent: :destroy
+  has_many :sns_credential, dependent: :destroy
+  has_many :items, dependent: :destroy
   def self.from_omniauth(auth)
     sns = SnsCredential.where(provider: auth.provider, uid: auth.uid).first_or_create
     # sns認証したことがあればアソシエーションで取得

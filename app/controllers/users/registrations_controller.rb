@@ -11,11 +11,20 @@ class Users::RegistrationsController < Devise::RegistrationsController
    @user = User.new
  end
 
+def edit
+end
+
 
  def show
  end
 
- 
+ def destroy
+  # @user = current.user          //今はログアウト画面に行きたいだけのためコメントアウト
+  # item = Item.find(params[:id])
+  # item.destroy
+  # redirect_to root_path
+end
+
  # POST /resource
  require "payjp"
  
