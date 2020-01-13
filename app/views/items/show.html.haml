@@ -81,6 +81,9 @@
       .proseed-to-order
         = button_to "購入する", purchase_index_path(@item), {method: :get, params: @item} 
         購入画面に進む
+
+      = link_to '編集', edit_item_path
+      = link_to '削除', item_path(@item), method: :delete
       
 
     -# 以降のコメントをmysqlにstringで放り込むが、ちゃんと改行コード入れられるのか？
@@ -119,11 +122,12 @@
         = link_to "https://www.pinterest.jp/" do
           .pinterest
             %i.fab.fa-pinterest.fa-xs
+
+
+
   = render 'shared/footer'
   
 
-= link_to '編集', edit_item_path
 
-= link_to '削除', item_path, method: :delete
 
 
