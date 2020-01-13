@@ -9,7 +9,11 @@
       .left-preview
         .left-preview__bigone
           = image_tag @item.images.first.src.url, size: "300x340", alt: "sample1", class:'smallpreview'
-        .left-preview__smallten
+          .left-preview__smallten
+            .left-preview__smallten__smallpreview
+              - @item.images.each do |image|
+                = image_tag(image.src.to_s,  alt: "comming soon", class: "imgs-sub")
+          
           
       .right-table
         %table.right-table__sellar
