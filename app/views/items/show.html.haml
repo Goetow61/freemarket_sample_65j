@@ -86,7 +86,7 @@
           送料込み
       -if user_signed_in?
         - if @item.user_id == current_user.id  
-          - unless @item.user_id
+          - unless @item.buyer_id
             .proseed-to-order
               = link_to '編集', edit_item_path
             .proseed-to-to
