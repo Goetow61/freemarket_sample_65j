@@ -26,7 +26,6 @@ class PurchaseController < ApplicationController
       customer: card.customer_id, #顧客ID
       currency: 'jpy', #日本円
       )
-      binding.pry
       @item.update(buyer_id: current_user.id)
       render :done
       # redirect_to action: 'done' #完了画面に移動
