@@ -104,9 +104,9 @@
 
           
         #previews
-        - if @item.persisted?
-          - @item.images.each_with_index do |image, i|
-            = image_tag image.src.url, data: { index: i }, width: "100", height: '100'
+          - if @item.persisted?
+            - @item.images.each_with_index do |image, i|
+              = image_tag image.src.url, data: { index: i }, width: "100", height: '100'
 
         -# #image-box.image-box
         -#   = f.fields_for :images do |image|
