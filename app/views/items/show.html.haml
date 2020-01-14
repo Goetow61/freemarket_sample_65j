@@ -9,6 +9,8 @@
       .left-preview
         .left-preview__bigone
           = image_tag @item.images.first.src.url, size: "300x340", alt: "sample1", class:'smallpreview'
+          - if @item.buyer_id
+            .left-preview__soldout
           .left-preview__smallten
             .left-preview__smallten__smallpreview
               - @item.images.each do |image|
@@ -83,17 +85,18 @@
         %p
           送料込み
       -if user_signed_in?
-        -if @item.user_id == current_user.id  
+        - if @item.user_id == current_user.id  
           .proseed-to-order
             = link_to '編集', edit_item_path
           .proseed-to-to
             or
           .proseed-to-order
             = link_to '削除', item_path, method: :delete
-      - else
-        .proseed-to-order
-          = link_to "購入画面に進む", purchase_index_path(@item), {method: :get, params: @item} 
-    
+        - else
+          - unless @item.buyer_id
+            .proseed-to-order
+              = link_to "購入画面に進む", purchase_index_path(@item), {method: :get, params: @item} 
+      
 
     -# 以降のコメントをmysqlにstringで放り込むが、ちゃんと改行コード入れられるのか？
     .detail-comment
