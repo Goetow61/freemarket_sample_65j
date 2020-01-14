@@ -86,12 +86,13 @@
           送料込み
       -if user_signed_in?
         - if @item.user_id == current_user.id  
-          .proseed-to-order
-            = link_to '編集', edit_item_path
-          .proseed-to-to
-            or
-          .proseed-to-order
-            = link_to '削除', item_path, method: :delete
+          - unless @item.user_id
+            .proseed-to-order
+              = link_to '編集', edit_item_path
+            .proseed-to-to
+              or
+            .proseed-to-order
+              = link_to '削除', item_path, method: :delete
         - else
           - unless @item.buyer_id
             .proseed-to-order
