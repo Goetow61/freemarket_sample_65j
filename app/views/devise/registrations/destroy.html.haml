@@ -94,6 +94,7 @@
           %i.fa.fa-chevron-right
   .a-right-content
     .a-right-content__btn
-      ログアウト
+      = link_to "ログアウト", destroy_user_session_path, method: :delete
+        
 = render 'shared/sell-button'
 = render 'shared/footer'
