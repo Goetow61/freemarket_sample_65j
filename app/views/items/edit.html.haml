@@ -86,7 +86,7 @@
 
 .contents
   .content
-    = form_for(@item, url: items_path(item.id), method: :patch) do |f|
+    = form_for @item do |f|
       .content-header
         %h 商品の情報を入力
       .content-image
