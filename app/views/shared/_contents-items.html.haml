@@ -4,6 +4,8 @@
       .contents-main__new__category__items__card__img
         = link_to item_path(item) do
           = image_tag item.images.first.src.url, size: "188x182", alt: "sample1"
+          - unless item.buyer_id == nil
+            .contents-main__new__category__items__card__img__soldout
         .contents-main__new__category__items__card__img__money
           = link_to item_path(item) do
             ¥

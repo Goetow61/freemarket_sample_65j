@@ -57,6 +57,29 @@
           height: 182px;
           width: 188px;
           box-sizing: border-box;
+          position: relative;
+          &__soldout{
+            &::before {
+              content: "";
+              top: 0;
+              left: 0;
+              border-bottom: 6em solid transparent;
+              border-left: 6em solid #ea352d; /* ラベルの色はここで変更 */
+              position: absolute;
+              z-index: 100;
+            }
+            &::after {
+              content: "Sold";
+              display: block;
+              top: 18px;
+              transform: rotate(-45deg);
+              color: #fff; /* 文字色はここで変更 */
+              left: 7px;
+              position: absolute;
+              z-index: 101;
+              font-size: 28px;
+            }
+          }
           &__money{
             font-size: 17px;
             color:#FFFFFF;
@@ -68,7 +91,9 @@
             position: absolute;
             top: 140px;
             a{color: white;}
-            }
+            
+          }
+            
          }
     &__text{
       height: 70px;
