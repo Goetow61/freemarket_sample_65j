@@ -1,14 +1,27 @@
 // Place all the styles related to the items controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-@mixin select{
-  width: 400px;
-  height:48px;
-  background-color: white;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  padding-left: 10px;
+@mixin select-box() {
+  .select-box {
+    position: relative;
+    select {
+      width: 400px;
+      height:48px;
+      background-color: white;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
+      padding-left: 10px;
+    }
+  }
+  .select-box::before {
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    content: "\f078";
+    line-height: 48px;
+    position: absolute;
+    right: 17px;
+  }
 }
 
 .contents{
@@ -72,13 +85,7 @@
             font-size: 16px;
             color: #333333;
             line-height: 162px;
-            // .js-file {
-            //   display: none;
-            // }
           }
-          // .js-file {
-          //   display: none;
-          // }
         }
         .dd-box {
           height: 162px;
@@ -94,7 +101,6 @@
       }
 
 
-      // #text{
       .content-image-comment {
         font-size: 14px;
         color :#333333;
@@ -149,17 +155,7 @@
           margin-top: 25px;
         }
       }
-
-      select{
-        @include select;
-        left: 40px;
-      }
-      // #grandchild_category {
-      //   margin-top: 20px;
-      // }
-      // label{
-      //   color: #888888;
-      // }
+      @include select-box;
 
     }
     &-delivery{
@@ -184,22 +180,16 @@
         width: 400px;
 
         &__burden {
-          // padding-top: 40px;
-          select {
-            @include select;
-          }
+          @include select-box;
         }
         &__method{
           padding-top: 40px;
-          select {
-            @include select;  
-          }
+          @include select-box;
+    
         }
         &__area{
           padding-top: 40px;
-          select {
-            @include select;
-          }
+          @include select-box;    
         }
         &__date{
           padding-top: 40px;
@@ -208,10 +198,7 @@
             font-size: 14px;
             // color:#888888;
           }
-          select{
-            @include select;
-            position: relative;
-          }
+          @include select-box;
         }
       }
     } 
@@ -305,21 +292,3 @@
     margin: 0 0 0 8px;
   }
 }
-
-i{
-  right: 30%;
-  // position: absolute;
-  margin-top: 15px;
-}
-// .a{
-//   height: 162px;
-//   width: 620px;
-//   background-color: #f5f5f5;
-//   border: dashed;
-//   border-color: rgb(190, 187, 187);
-//   text-align: center;
-//   padding-top: 60px;
-//   box-sizing: border-box;
-// }
-
-
