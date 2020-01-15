@@ -18,6 +18,9 @@ end
  def show
  end
 
+ def add_card_menu
+ end
+
  def destroy
   # @user = current.user          //今はログアウト画面に行きたいだけのためコメントアウト
   # item = Item.find(params[:id])
