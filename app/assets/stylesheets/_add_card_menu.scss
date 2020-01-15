@@ -10,9 +10,12 @@
       font-size: 24px;
       font-weight: bold;
     }
-    .bottombox {
+
+    // (非表示中) クレジットカードを登録していない場合は、新規登録画面に遷移させる
+    .centerbox-create {
+      display: none !important;
       border-top: 1px solid #f5f5f5;
-      padding: 40px;
+      padding: 40px 40px 0px 40px;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -26,7 +29,7 @@
         display: flex;
         justify-content: center;
         padding: 24px 0;
-        border-bottom: 1px solid #eee;
+        // border-bottom: 1px solid #eee;
         &__add-credit-btn::before {
           font-family: "Font Awesome 5 Free";
           font-weight: 400;
@@ -44,8 +47,29 @@
           color: #ffffff;
         }
       }
+    }
+
+    // (アクティブ中) カード削除・・・ではなくカード表示
+    .centerbox-delete {
+      border-top: 1px solid #f5f5f5;
+      padding: 40px 40px 0px 40px;
+      .detail {
+        width: 320px;
+        margin: 0 auto 0 auto;
+        .leftbox {
+          padding-top: 24px;
+          padding-bottom: 24px;
+        }
+      }
+    }
+
+    .bottom-box {
+      padding: 0px 40px 40px 40px;
       .bottom-section {
-        margin: 40px 0 auto auto;
+        margin: 0px 0px auto auto;
+        padding-top: 40px;
+        text-align: right;
+        border-top: 1px solid #eee;
       }
       .link1::after {
         font-family: "Font Awesome 5 Free";

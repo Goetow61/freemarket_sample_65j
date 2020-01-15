@@ -90,11 +90,20 @@
   .a-right-content
     .topbox
       支払い方法
-    .bottombox
+    .centerbox-create
       .heading
         クレジットカード一覧
       .center-section
         = link_to "クレジットカードを追加する", "#", class:"center-section__add-credit-btn"
+    .centerbox-delete
+      .detail
+        .heading
+          クレジットカード一覧
+        .leftbox
+          = image_tag "logo_visa.gif", size: "26x20", alt: "logo_visa"
+          %p ************4242
+          %p 05/20
+    .bottom-box
       .bottom-section
         = link_to "支払い方法について", "#", class:"link1"
 
