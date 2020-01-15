@@ -8,6 +8,11 @@ crumb :mypage do
   link "マイページ", show_path
 end
 
+# クレジット登録ページ
+crumb :addcard do
+  link "カード", addcard_path
+end
+
 # crumb :projects do
 #   link "Projects", projects_path
 # end

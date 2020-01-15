@@ -1,0 +1,58 @@
+.mypage-main-content {
+  .a-right-content {
+    height: auto;
+    .topbox {
+      height: 25px;
+      line-height: 25px;
+      padding: 12px 4%;
+      border-bottom: 1px solid #f5f5f5;
+      text-align: center;
+      font-size: 24px;
+      font-weight: bold;
+    }
+    .bottombox {
+      border-top: 1px solid #f5f5f5;
+      padding: 40px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      .heading {
+        width: 320px;
+        font-weight: bold;
+      }
+      .center-section {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        padding: 24px 0;
+        border-bottom: 1px solid #eee;
+        &__add-credit-btn::before {
+          font-family: "Font Awesome 5 Free";
+          font-weight: 400;
+          content: "\f09d";
+          color: #ffffff;
+          margin-right: 20px;
+        }
+        a,&__add-credit-btn {
+          font-size: 14px;
+          text-align: center;
+          width: 320px;
+          height: 48px;
+          line-height: 48px;
+          background-color: #EA3522;
+          color: #ffffff;
+        }
+      }
+      .bottom-section {
+        margin: 40px 0 auto auto;
+      }
+      .link1::after {
+        font-family: "Font Awesome 5 Free";
+        font-weight: 900;
+        content: "\f054";
+        margin-left: 5px;
+      }
+    }
+  }
+}
