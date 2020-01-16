@@ -12,6 +12,7 @@ Rails.application.routes.draw do
     get 'destroy',   to: 'users/registrations#destroy'
     get 'edit',  to: 'users/registrations#edit'
     get 'index', to: 'users/confirmations#index'
+    get 'addcard', to: 'users/registrations#add_card_menu'
   end
   root to: 'top#index'
   resources :items do
