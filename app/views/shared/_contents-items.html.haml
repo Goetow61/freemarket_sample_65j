@@ -1,16 +1,15 @@
 .contents-main__new__category__items
-  - @ladies.each do |item|
-    .contents-main__new__category__items__card
-      .contents-main__new__category__items__card__img
+  -# - @ladies.each do |item|
+  .contents-main__new__category__items__card
+    .contents-main__new__category__items__card__img
+      = link_to item_path(item) do
+        = image_tag item.images.first.src.url, size: "188x182", alt: "sample1"
+        - unless item.buyer_id == nil
+          .contents-main__new__category__items__card__img__soldout
+      .contents-main__new__category__items__card__img__money
         = link_to item_path(item) do
-          = image_tag item.images.first.src.url, size: "188x182", alt: "sample1"
-          - unless item.buyer_id == nil
-            .contents-main__new__category__items__card__img__soldout
-        .contents-main__new__category__items__card__img__money
-          = link_to item_path(item) do
-            ¥
-            = item.price
-      .contents-main__new__category__items__card__text
-        = link_to item_path(item) do
-          = item.item_name
-      
+          ¥
+          = item.price
+    .contents-main__new__category__items__card__text
+      = link_to item_path(item) do
+        = item.item_name
